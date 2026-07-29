@@ -1,0 +1,162 @@
+---
+import heroImage from "../assets/images/hero.JPG";
+---
+<section class="hero">
+
+  <div class="hero-text">
+
+    <p class="eyebrow">Alltagsservice</p>
+
+    <h1>
+      Alltag leichter machen. –
+      <span>Alltag leichter machen.
+
+Persönliche Unterstützung für Haushalt, Garten und kleine Aufgaben – zuverlässig und unkompliziert.</span>
+    </h1>
+
+    <p class="intro">
+      Ich unterstütze Sie bei alltäglichen Aufgaben –
+      freundlich, flexibel und zuverlässig.
+    </p>
+
+    <a href="#kontakt" class="button">
+      Kontakt aufnehmen
+    </a>
+
+  </div>
+
+  <div class="hero-image">
+
+   <img
+  src={heroImage.src}
+  alt="Alltagsservice"
+  loading="eager"
+/>
+
+  </div>
+
+</section>
+
+<style>
+
+.hero{
+
+max-width:1100px;
+margin:70px auto;
+padding:20px;
+
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:50px;
+align-items:center;
+
+}
+
+.eyebrow{
+
+color:var(--green);
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:1px;
+
+}
+
+.hero h1{
+
+font-size:4.2rem;
+line-height:1.05;
+font-weight:800;
+margin:20px 0;
+
+}
+
+.hero h1 span{
+
+color:var(--petrol);
+
+}
+
+.intro{
+
+font-size:1.25rem;
+line-height:1.8;
+margin-bottom:40px;
+max-width:560px;
+
+}
+
+.button{
+
+display:inline-block;
+padding:16px 34px;
+
+background:linear-gradient(
+135deg,
+var(--orange),
+#d87a56
+);
+
+color:white;
+
+font-weight:700;
+
+border-radius:999px;
+
+text-decoration:none;
+
+box-shadow:0 12px 30px rgba(201,106,74,.35);
+
+transition:all .3s ease;
+
+}
+
+.button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 20px 40px rgba(201,106,74,.45);
+
+}
+
+.hero-image img{
+
+width:100%;
+height:500px;
+
+object-fit:cover;
+
+border-radius:28px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+transition:.4s;
+
+}
+.hero-image img:hover{
+
+transform:scale(1.02);
+
+}
+
+@media(max-width:900px){
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 20px;
+
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro{
+
+margin:auto auto 35px;
+
+}
+
+}
+
+</style>
