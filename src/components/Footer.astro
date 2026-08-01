@@ -1,53 +1,387 @@
-<footer class="footer">
-  <div class="footer-content">
-    <p>© {new Date().getFullYear()} Alltagsservice</p>
+---
+---
 
-    <nav>
-      <a href="/impressum">Impressum</a>
-      <a href="/datenschutz">Datenschutz</a>
-    </nav>
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- Logo / Text -->
+
+      <div class="footer-column footer-about">
+
+        <a href="/" class="footer-logo">
+
+          <div class="footer-logo-icon">
+
+            🏡
+
+          </div>
+
+          <div>
+
+            <span class="footer-logo-title">
+              Alltagsservice
+            </span>
+
+            <span class="footer-logo-subtitle">
+              Persönlich & zuverlässig
+            </span>
+
+          </div>
+
+        </a>
+
+        <p class="footer-text">
+
+          Persönliche Unterstützung im Alltag
+          für Menschen in Wien und Umgebung.
+          Zuverlässig, freundlich und individuell.
+
+        </p>
+
+      </div>
+
+      <!-- Leistungen -->
+
+      <div class="footer-column">
+
+        <h3>Leistungen</h3>
+
+        <ul>
+
+          <li><a href="#services">Haushalt</a></li>
+
+          <li><a href="#services">Garten</a></li>
+
+          <li><a href="#services">Einkäufe</a></li>
+
+          <li><a href="#services">Fahrdienste</a></li>
+
+          <li><a href="#services">Kleinreparaturen</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Kontakt -->
+
+      <div class="footer-column">
+
+        <h3>Kontakt</h3>
+
+        <ul>
+
+          <li>📞 +43 XXX XXX XXXX</li>
+
+          <li>✉️ info@alltagsservice.at</li>
+
+          <li>📍 Wien & Umgebung</li>
+
+          <li>Mo–Fr<br>08:00–18:00 Uhr</li>
+
+        </ul>
+
+      </div>
+
+      <!-- Rechtliches -->
+
+      <div class="footer-column">
+
+        <h3>Rechtliches</h3>
+
+        <ul>
+
+          <li><a href="/impressum">Impressum</a></li>
+
+          <li><a href="/datenschutz">Datenschutz</a></li>
+
+          <li><a href="#contact">Kontakt</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+
+        © {new Date().getFullYear()} Alltagsservice · Alle Rechte vorbehalten.
+
+      </p>
+
+      <div class="footer-bottom-links">
+
+        <a href="/impressum">
+
+          Impressum
+
+        </a>
+
+        <a href="/datenschutz">
+
+          Datenschutz
+
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
-</footer>
 
 <style>
-  .footer {
-    background: var(--petrol);
-    color: white;
-    padding: 2rem 1rem;
-    margin-top: 4rem;
-  }
 
-  .footer-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+.footer{
 
-  .footer nav {
-    display: flex;
-    gap: 1.5rem;
-  }
+background:var(--petrol);
 
-  .footer a {
-    color: white;
-    text-decoration: none;
-  }
+color:white;
 
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  @media (max-width: 700px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
+padding:80px 0 30px;
 
-  .footer nav {
-    justify-content: center;
-  }
 }
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:50px;
+
+margin-bottom:45px;
+
+}
+
+.footer-logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:22px;
+
+}
+
+.footer-logo-icon{
+
+width:58px;
+
+height:58px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.12);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:1.8rem;
+
+}
+
+.footer-logo-title{
+
+display:block;
+
+font-size:1.4rem;
+
+font-weight:800;
+
+color:white;
+
+}
+
+.footer-logo-subtitle{
+
+display:block;
+
+font-size:.82rem;
+
+margin-top:4px;
+
+color:rgba(255,255,255,.8);
+
+}
+
+.footer-text{
+
+max-width:320px;
+
+color:rgba(255,255,255,.82);
+
+}
+
+.footer-column h3{
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.footer-column ul{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+}
+
+.footer-column li{
+
+margin-bottom:14px;
+
+color:rgba(255,255,255,.82);
+
+}
+
+.footer-column a{
+
+transition:.25s;
+
+color:rgba(255,255,255,.82);
+
+}
+.footer-column a:hover{
+
+color:white;
+
+padding-left:6px;
+
+}
+
+.footer-bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+padding-top:28px;
+
+border-top:1px solid rgba(255,255,255,.15);
+
+flex-wrap:wrap;
+
+}
+
+.footer-bottom p{
+
+margin:0;
+
+color:rgba(255,255,255,.75);
+
+font-size:.95rem;
+
+}
+
+.footer-bottom-links{
+
+display:flex;
+
+gap:24px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-bottom-links a{
+
+color:rgba(255,255,255,.75);
+
+transition:.25s;
+
+}
+
+.footer-bottom-links a:hover{
+
+color:white;
+
+padding-left:0;
+
+}
+
+@media(max-width:1024px){
+
+.footer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+padding:65px 0 25px;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+gap:35px;
+
+text-align:center;
+
+}
+
+.footer-logo{
+
+justify-content:center;
+
+}
+
+.footer-text{
+
+margin:0 auto;
+
+max-width:100%;
+
+}
+
+.footer-column a:hover{
+
+padding-left:0;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.footer-bottom-links{
+
+justify-content:center;
+
+}
+
+}
+
 </style>
+
+</footer>

@@ -1,35 +1,119 @@
 ---
-import heroImage from "../assets/images/hero.JPG";
 ---
+
 <section class="hero">
 
-  <div class="hero-text">
+  <div class="container hero-grid">
 
-    <p class="eyebrow">Alltagsservice</p>
+    <div class="hero-content">
 
-    <h1>
-      Alltag leichter machen. –
-      <span>Persönliche Unterstützung für Haushalt, Garten und kleine Aufgaben – zuverlässig und unkompliziert.</span>
-    </h1>
+      <span class="hero-badge">
+        Persönlich • Zuverlässig • Flexibel
+      </span>
 
-    <p class="intro">
-      Ich unterstütze Sie bei alltäglichen Aufgaben –
-      freundlich, flexibel und zuverlässig.
-    </p>
+      <h1>
 
-    <a href="#kontakt" class="button">
-      Kontakt aufnehmen
-    </a>
+        Hilfe im Alltag –
+        <span>damit Sie mehr Zeit für die wichtigen Dinge haben.</span>
 
-  </div>
+      </h1>
 
-  <div class="hero-image">
+      <p class="hero-text">
 
-   <img
-  src={heroImage.src}
-  alt="Alltagsservice"
-  loading="eager"
-/>
+        Ich unterstütze Sie zuverlässig bei alltäglichen Aufgaben –
+        vom Haushalt über Einkäufe bis hin zu Gartenarbeiten,
+        Begleitungen und kleinen Reparaturen.
+        Persönlich, freundlich und genau nach Ihren Bedürfnissen.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#contact"
+          class="btn">
+
+          Jetzt anfragen
+
+        </a>
+
+        <a
+          href="#services"
+          class="btn btn-outline">
+
+          Leistungen ansehen
+
+        </a>
+
+      </div>
+
+      <div class="hero-facts">
+
+        <div class="fact">
+
+          <div class="fact-number">
+
+            ✓
+
+          </div>
+
+          <div>
+
+            <strong>Persönlicher Service</strong>
+
+            <p>Ein Ansprechpartner für alle Anliegen.</p>
+
+          </div>
+
+        </div>
+
+        <div class="fact">
+
+          <div class="fact-number">
+
+            ✓
+
+          </div>
+
+          <div>
+
+            <strong>Flexible Termine</strong>
+
+            <p>Einmalig oder regelmäßig buchbar.</p>
+
+          </div>
+
+        </div>
+
+        <div class="fact">
+
+          <div class="fact-number">
+
+            ✓
+
+          </div>
+
+          <div>
+
+            <strong>Wien & Umgebung</strong>
+
+            <p>Schnell vor Ort, wenn Hilfe benötigt wird.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="/images/hero.jpg"
+        alt="Alltagsservice Wien">
+
+    </div>
 
   </div>
 
@@ -39,119 +123,334 @@ import heroImage from "../assets/images/hero.JPG";
 
 .hero{
 
-max-width:1100px;
-margin:70px auto;
-padding:20px;
+background:linear-gradient(
+180deg,
+#FAF8F3 0%,
+#F5F7F6 100%
+);
 
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:50px;
-align-items:center;
+overflow:hidden;
 
 }
 
-.eyebrow{
+.hero-grid{
 
-color:var(--green);
+display:grid;
+
+grid-template-columns:1.1fr .9fr;
+
+align-items:center;
+
+gap:70px;
+
+min-height:720px;
+
+}
+
+.hero-content{
+
+max-width:650px;
+
+}
+
+.hero-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:10px 20px;
+
+border-radius:999px;
+
+background:#EAF5F3;
+
+color:var(--petrol);
+
 font-weight:700;
-text-transform:uppercase;
-letter-spacing:1px;
+
+margin-bottom:28px;
 
 }
 
 .hero h1{
 
-font-size:4.2rem;
-line-height:1.05;
-font-weight:800;
-margin:20px 0;
+margin-bottom:30px;
+
+letter-spacing:-1px;
 
 }
 
 .hero h1 span{
 
+display:block;
+
+margin-top:10px;
+
 color:var(--petrol);
 
 }
 
-.intro{
+.hero-text{
 
-font-size:1.25rem;
-line-height:1.8;
-margin-bottom:40px;
+font-size:1.15rem;
+
+margin-bottom:45px;
+
 max-width:560px;
 
 }
 
-.button{
+.hero-buttons{
 
-display:inline-block;
-padding:16px 34px;
+display:flex;
 
-background:linear-gradient(
-135deg,
-var(--orange),
-#d87a56
-);
+gap:18px;
 
-color:white;
+flex-wrap:wrap;
 
-font-weight:700;
-
-border-radius:999px;
-
-text-decoration:none;
-
-box-shadow:0 12px 30px rgba(201,106,74,.35);
-
-transition:all .3s ease;
+margin-bottom:50px;
 
 }
 
-.button:hover{
+.hero-facts{
 
-transform:translateY(-4px);
+display:flex;
 
-box-shadow:0 20px 40px rgba(201,106,74,.45);
+flex-direction:column;
+
+gap:22px;
+
+}
+
+.fact{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:18px;
+
+}
+
+.fact-number{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+background:#EAF5F3;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:700;
+
+color:var(--petrol);
+
+flex-shrink:0;
+
+}
+
+.fact strong{
+
+display:block;
+
+margin-bottom:4px;
+
+color:var(--petrol);
+
+}
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
 
 }
 
 .hero-image img{
 
 width:100%;
-height:500px;
+
+max-width:540px;
+
+height:640px;
 
 object-fit:cover;
 
-border-radius:28px;
+border-radius:30px;
 
-box-shadow:0 25px 60px rgba(0,0,0,.18);
+box-shadow:0 30px 60px rgba(0,0,0,.15);
 
-transition:.4s;
-
-}
-.hero-image img:hover{
-
-transform:scale(1.02);
+animation:floatImage 7s ease-in-out infinite;
 
 }
 
-@media(max-width:900px){
+@keyframes floatImage{
 
-.hero {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 100px 20px;
+0%{
 
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 60px;
-  align-items: center;
+transform:translateY(0);
+
 }
 
-.intro{
+50%{
 
-margin:auto auto 35px;
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+@media(max-width:980px){
+
+.hero{
+
+padding-top:60px;
+
+}
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+min-height:auto;
+
+}
+
+.hero-content{
+
+order:2;
+
+text-align:center;
+
+max-width:100%;
+
+margin:auto;
+
+}
+
+.hero-text{
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-buttons .btn{
+
+width:100%;
+
+max-width:340px;
+
+}
+
+.hero-facts{
+
+margin-top:10px;
+
+align-items:center;
+
+}
+
+.fact{
+
+max-width:420px;
+
+}
+
+.hero-image{
+
+order:1;
+
+}
+
+.hero-image img{
+
+height:460px;
+
+max-width:520px;
+
+}
+
+}
+
+@media(max-width:640px){
+
+.hero{
+
+padding-top:40px;
+
+}
+
+.hero-grid{
+
+gap:35px;
+
+}
+
+.hero h1{
+
+font-size:2.6rem;
+
+}
+
+.hero-text{
+
+font-size:1rem;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.hero-buttons .btn{
+
+max-width:100%;
+
+}
+
+.hero-image img{
+
+height:340px;
+
+border-radius:22px;
+
+}
+
+.fact{
+
+text-align:left;
 
 }
 

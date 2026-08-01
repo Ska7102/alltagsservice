@@ -11,59 +11,75 @@ const {
 } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="de">
 
 <head>
 
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <meta
 name="description"
-content="Alltagsservice Wien – Hilfe im Haushalt, Garten, Einkauf, Begleitung und vieles mehr. Persönlich, zuverlässig und flexibel."
-/>
+content="Alltagsservice Wien – Persönliche Unterstützung im Haushalt, Garten, Einkauf, Begleitung und vielen weiteren Bereichen des täglichen Lebens.">
+
+<meta
+name="theme-color"
+content="#2F6D73">
 
 <title>{title}</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <style is:global>
 
 :root{
 
 --petrol:#2F6D73;
-
---orange:#E69A3B;
-
+--orange:#E89A3D;
 --cream:#FAF8F3;
-
---white:#ffffff;
-
+--white:#FFFFFF;
+--light:#F5F7F6;
 --text:#333333;
+--text-light:#666666;
 
---light:#F2F5F4;
+--radius:22px;
 
---radius:18px;
+--shadow:
+0 12px 35px rgba(0,0,0,.08);
 
---shadow:0 12px 35px rgba(0,0,0,.08);
+--shadow-hover:
+0 20px 50px rgba(0,0,0,.15);
 
---max:1180px;
+--transition:.30s;
+
+--container:1180px;
 
 }
 
-*{
+/* RESET */
+
+*,
+*::before,
+*::after{
 
 margin:0;
-
 padding:0;
-
 box-sizing:border-box;
 
 }
@@ -90,9 +106,9 @@ overflow-x:hidden;
 
 img{
 
-max-width:100%;
-
 display:block;
+
+max-width:100%;
 
 }
 
@@ -104,37 +120,51 @@ color:inherit;
 
 }
 
-section{
+.container{
 
-padding:90px 20px;
+max-width:var(--container);
+
+margin:auto;
+
+padding-inline:24px;
 
 }
 
-.container{
+main{
 
-max-width:var(--max);
+min-height:70vh;
 
-margin:auto;
+}
+
+section{
+
+padding:110px 0;
 
 }
 
 h1{
 
-font-size:clamp(2.4rem,5vw,4.6rem);
+font-size:clamp(3rem,6vw,5rem);
+
+line-height:1.05;
 
 font-weight:800;
 
-line-height:1.1;
+margin-bottom:28px;
 
-margin-bottom:25px;
+color:var(--petrol);
+
+letter-spacing:-1px;
 
 }
 
 h2{
 
-font-size:clamp(2rem,4vw,3rem);
+font-size:clamp(2.2rem,4vw,3.2rem);
 
-margin-bottom:25px;
+font-weight:700;
+
+margin-bottom:24px;
 
 color:var(--petrol);
 
@@ -142,15 +172,51 @@ color:var(--petrol);
 
 h3{
 
-font-size:1.3rem;
+font-size:1.4rem;
 
-margin-bottom:12px;
+font-weight:700;
+
+margin-bottom:16px;
+
+color:var(--petrol);
 
 }
 
 p{
 
-font-size:1.05rem;
+font-size:1.08rem;
+
+line-height:1.9;
+
+color:var(--text-light);
+
+}
+
+strong{
+
+color:var(--text);
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.section-subtitle{
+
+max-width:760px;
+
+margin:0 auto 70px;
+
+text-align:center;
+
+font-size:1.12rem;
+
+color:var(--text-light);
 
 }
 
@@ -158,9 +224,9 @@ font-size:1.05rem;
 
 display:inline-flex;
 
-align-items:center;
-
 justify-content:center;
+
+align-items:center;
 
 padding:16px 34px;
 
@@ -172,15 +238,23 @@ color:white;
 
 font-weight:700;
 
-transition:.25s;
+transition:var(--transition);
 
 box-shadow:var(--shadow);
+
+cursor:pointer;
+
+border:none;
+
+min-height:56px;
 
 }
 
 .btn:hover{
 
-transform:translateY(-3px);
+transform:translateY(-4px);
+
+box-shadow:var(--shadow-hover);
 
 }
 
@@ -188,9 +262,170 @@ transform:translateY(-3px);
 
 background:white;
 
+border:2px solid var(--petrol);
+
 color:var(--petrol);
 
-border:2px solid var(--petrol);
+}
+.card{
+
+background:white;
+
+border-radius:var(--radius);
+
+padding:38px;
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+display:flex;
+
+flex-direction:column;
+
+height:100%;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:var(--shadow-hover);
+
+}
+
+.grid{
+
+display:grid;
+
+gap:35px;
+
+}
+
+.grid-2{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid-3{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.icon{
+
+width:72px;
+
+height:72px;
+
+border-radius:20px;
+
+background:#EAF5F3;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:2rem;
+
+margin-bottom:22px;
+
+transition:.3s;
+
+}
+
+.card:hover .icon{
+
+transform:scale(1.08);
+
+}
+
+.mt-1{margin-top:1rem;}
+.mt-2{margin-top:2rem;}
+.mt-3{margin-top:3rem;}
+.mt-4{margin-top:4rem;}
+
+.mb-1{margin-bottom:1rem;}
+.mb-2{margin-bottom:2rem;}
+.mb-3{margin-bottom:3rem;}
+.mb-4{margin-bottom:4rem;}
+
+.fade-up{
+
+animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+padding:16px 18px;
+
+font-family:inherit;
+
+font-size:1rem;
+
+border-radius:16px;
+
+border:1px solid #d9d9d9;
+
+transition:.25s;
+
+}
+
+input:focus,
+textarea:focus{
+
+outline:none;
+
+border-color:var(--petrol);
+
+box-shadow:0 0 0 3px rgba(47,109,115,.15);
+
+}
+
+textarea{
+
+resize:vertical;
+
+min-height:180px;
+
+}
+
+@media(max-width:1024px){
+
+.grid-3{
+
+grid-template-columns:repeat(2,1fr);
+
+}
 
 }
 
@@ -198,7 +433,74 @@ border:2px solid var(--petrol);
 
 section{
 
-padding:70px 18px;
+padding:80px 0;
+
+}
+
+.container{
+
+padding-inline:18px;
+
+}
+
+.grid-2,
+.grid-3{
+
+grid-template-columns:1fr;
+
+}
+
+.card{
+
+padding:30px;
+
+}
+
+.section-subtitle{
+
+margin-bottom:45px;
+
+}
+
+.btn{
+
+width:100%;
+
+max-width:340px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+h1{
+
+font-size:2.6rem;
+
+}
+
+h2{
+
+font-size:2rem;
+
+}
+
+h3{
+
+font-size:1.25rem;
+
+}
+
+p{
+
+font-size:1rem;
+
+}
+
+section{
+
+padding:65px 0;
 
 }
 

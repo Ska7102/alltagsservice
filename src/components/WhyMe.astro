@@ -1,32 +1,129 @@
-<section class="why">
+---
+---
 
-  <h2>Warum mit mir?</h2>
+<section id="why">
 
-  <div class="grid">
+  <div class="container">
 
-    <article>
-      <div class="icon">🤝</div>
-      <h3>Persönlich</h3>
-      <p>Direkter Kontakt und individuelle Unterstützung.</p>
-    </article>
+    <div class="section-header">
 
-    <article>
-      <div class="icon">⏰</div>
-      <h3>Zuverlässig</h3>
-      <p>Absprachen werden eingehalten und Termine ernst genommen.</p>
-    </article>
+      <span class="section-eyebrow">
+        Warum Alltagsservice?
+      </span>
 
-    <article>
-      <div class="icon">🌿</div>
-      <h3>Flexibel</h3>
-      <p>Hilfe genau dort, wo sie gebraucht wird.</p>
-    </article>
+      <h2 class="section-title">
+        Darauf können Sie sich
+        <br>
+        jederzeit verlassen.
+      </h2>
 
-    <article>
-      <div class="icon">😊</div>
-      <h3>Freundlich</h3>
-      <p>Mit Respekt, Geduld und einem offenen Ohr.</p>
-    </article>
+      <p class="section-subtitle">
+        Mein Ziel ist es, Ihnen den Alltag zu erleichtern –
+        mit persönlichem Service, Zuverlässigkeit und einem
+        offenen Ohr für Ihre Wünsche.
+      </p>
+
+    </div>
+
+    <div class="why-grid">
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          🤝
+
+        </div>
+
+        <h3>
+
+          Persönlicher Ansprechpartner
+
+        </h3>
+
+        <p>
+
+          Sie sprechen immer mit derselben Person.
+          Keine Hotline, keine wechselnden Mitarbeiter,
+          sondern persönlicher Service von Anfang an.
+
+        </p>
+
+      </article>
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          ⭐
+
+        </div>
+
+        <h3>
+
+          Zuverlässig & pünktlich
+
+        </h3>
+
+        <p>
+
+          Vereinbarte Termine werden eingehalten.
+          Sie können sich darauf verlassen,
+          dass ich pünktlich und sorgfältig arbeite.
+
+        </p>
+
+      </article>
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          ❤️
+
+        </div>
+
+        <h3>
+
+          Mit Herz bei der Sache
+
+        </h3>
+
+        <p>
+
+          Freundlichkeit,
+          Geduld und Respekt gehören für mich
+          selbstverständlich zu jeder Unterstützung.
+
+        </p>
+
+      </article>
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          🕒
+
+        </div>
+
+        <h3>
+
+          Flexible Unterstützung
+
+        </h3>
+
+        <p>
+
+          Ob einmalige Hilfe oder regelmäßige Unterstützung –
+          gemeinsam finden wir die passende Lösung
+          für Ihren Alltag.
+
+        </p>
+
+      </article>
+
+    </div>
 
   </div>
 
@@ -34,44 +131,174 @@
 
 <style>
 
-.why{
+#why{
 
-max-width:1100px;
-margin:90px auto;
-padding:20px;
+background:var(--light);
+
+}
+
+.section-header{
+
 text-align:center;
 
+margin-bottom:70px;
+
 }
 
-.why h2{
+.section-eyebrow{
 
-font-size:2.2rem;
-margin-bottom:50px;
+display:inline-block;
+
+padding:10px 20px;
+
+background:#EAF5F3;
+
+border-radius:999px;
+
 color:var(--petrol);
 
+font-weight:700;
+
+margin-bottom:20px;
+
 }
 
-.grid{
+.why-grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
 
 }
 
-.grid article{
+.why-card{
 
 background:white;
-padding:30px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+border-radius:24px;
+
+padding:38px;
+
+box-shadow:var(--shadow);
+
+display:flex;
+
+flex-direction:column;
+
+transition:.30s;
+
+height:100%;
 
 }
 
-.icon{
+.why-card:hover{
 
-font-size:3rem;
-margin-bottom:15px;
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-hover);
+
+}
+
+.why-icon{
+
+width:76px;
+
+height:76px;
+
+border-radius:22px;
+
+background:#EAF5F3;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:2rem;
+
+margin-bottom:26px;
+
+transition:.30s;
+
+}
+
+.why-card:hover .why-icon{
+
+transform:scale(1.08) rotate(-4deg);
+
+}
+
+.why-card h3{
+
+margin-bottom:18px;
+
+}
+
+.why-card p{
+
+flex:1;
+
+}
+@media(max-width:1024px){
+
+.why-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+#why{
+
+padding-top:80px;
+
+padding-bottom:80px;
+
+}
+
+.section-header{
+
+margin-bottom:50px;
+
+}
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+gap:24px;
+
+}
+
+.why-card{
+
+padding:30px;
+
+}
+
+.why-icon{
+
+width:64px;
+
+height:64px;
+
+font-size:1.8rem;
+
+margin-bottom:20px;
+
+}
+
+.why-card h3{
+
+font-size:1.3rem;
+
+}
 
 }
 

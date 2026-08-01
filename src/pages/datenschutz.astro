@@ -1,0 +1,294 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Datenschutzerklärung | Alltagsservice">
+
+<section class="legal">
+
+  <div class="container">
+
+    <span class="section-eyebrow">
+
+      Datenschutz
+
+    </span>
+
+    <h1>
+
+      Datenschutzerklärung
+
+    </h1>
+
+    <p class="intro">
+
+      Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen.
+      Ich verarbeite Ihre Daten daher ausschließlich auf Grundlage der
+      gesetzlichen Bestimmungen (DSGVO, DSG und TKG).
+
+    </p>
+
+    <div class="legal-card">
+
+      <h2>
+
+        Verantwortlicher
+
+      </h2>
+
+      <p>
+
+        <strong>Alltagsservice</strong><br>
+
+        Sascha Kattenberg<br>
+
+        Rugierstraße 28/4/4<br>
+
+        1220 Wien<br>
+
+        Österreich
+
+      </p>
+
+      <p>
+
+        Telefon:<br>
+
+        +43 660 462 39 79
+
+      </p>
+
+      <p>
+
+        E-Mail:<br>
+
+        alltagsservice@chello.at
+
+      </p>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>
+
+        Kontaktaufnahme
+
+      </h2>
+
+      <p>
+
+        Wenn Sie per E-Mail oder über das Kontaktformular mit mir
+        Kontakt aufnehmen, werden Ihre angegebenen Daten ausschließlich
+        zur Bearbeitung Ihrer Anfrage verarbeitet.
+
+      </p>
+
+      <p>
+
+        Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht
+        an Dritte weitergegeben.
+
+      </p>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>
+
+        Server-Logfiles
+
+      </h2>
+
+      <p>
+
+        Der Hostinganbieter dieser Website erhebt und speichert
+        automatisch Informationen in sogenannten Server-Logfiles.
+        Dazu gehören beispielsweise IP-Adresse, Browsertyp,
+        Datum und Uhrzeit des Zugriffs sowie aufgerufene Seiten.
+
+      </p>
+
+      <p>
+
+        Diese Daten dienen ausschließlich dem sicheren Betrieb
+        der Website und werden nicht bestimmten Personen zugeordnet.
+
+      </p>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>
+
+        Hosting
+
+      </h2>
+
+      <p>
+
+        Diese Website wird über den Hostinganbieter
+        <strong>Netlify</strong> bereitgestellt.
+        Dabei können technisch notwendige personenbezogene Daten
+        verarbeitet werden, um den sicheren Betrieb der Website
+        zu gewährleisten.
+
+      </p>
+
+    </div>
+    <div class="legal-card">
+
+      <h2>
+
+        Cookies
+
+      </h2>
+
+      <p>
+
+        Diese Website verwendet derzeit keine Cookies zu
+        Marketing- oder Analysezwecken. Sollten künftig
+        zusätzliche Funktionen oder externe Dienste
+        eingebunden werden, wird diese Datenschutzerklärung
+        entsprechend angepasst.
+
+      </p>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>
+
+        Ihre Rechte
+
+      </h2>
+
+      <p>
+
+        Ihnen stehen grundsätzlich die Rechte auf Auskunft,
+        Berichtigung, Löschung, Einschränkung der Verarbeitung,
+        Datenübertragbarkeit, Widerruf und Widerspruch zu.
+
+      </p>
+
+      <p>
+
+        Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer
+        personenbezogenen Daten gegen datenschutzrechtliche
+        Bestimmungen verstößt, können Sie sich bei der
+        österreichischen Datenschutzbehörde beschweren.
+
+      </p>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>
+
+        Änderungen dieser Datenschutzerklärung
+
+      </h2>
+
+      <p>
+
+        Diese Datenschutzerklärung wird bei Bedarf aktualisiert,
+        damit sie stets den aktuellen gesetzlichen Anforderungen
+        entspricht oder Änderungen meiner Leistungen berücksichtigt.
+
+      </p>
+
+      <p>
+
+        Stand: August 2026
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.legal{
+
+background:linear-gradient(
+180deg,
+#FAF8F3 0%,
+#FFFFFF 100%
+);
+
+}
+
+.intro{
+
+max-width:760px;
+
+margin-bottom:50px;
+
+}
+
+.legal-card{
+
+background:white;
+
+padding:36px;
+
+border-radius:24px;
+
+box-shadow:var(--shadow);
+
+margin-bottom:28px;
+
+transition:.30s;
+
+}
+
+.legal-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:var(--shadow-hover);
+
+}
+
+.legal-card h2{
+
+font-size:1.45rem;
+
+margin-bottom:18px;
+
+}
+
+.legal-card p{
+
+margin-bottom:16px;
+
+}
+
+@media(max-width:768px){
+
+.legal{
+
+padding-top:80px;
+
+padding-bottom:80px;
+
+}
+
+.legal-card{
+
+padding:28px;
+
+}
+
+}
+
+</style>
+
+</Layout>
