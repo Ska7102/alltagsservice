@@ -17,15 +17,15 @@
 
         <h2>
 
-          Ich freue mich auf Ihre Nachricht.
+          Ich freue mich auf Ihre Anfrage.
 
         </h2>
 
         <p>
 
-          Sie möchten Unterstützung im Alltag oder haben Fragen zu
-          meinen Leistungen? Kontaktieren Sie mich ganz unverbindlich.
-          Gemeinsam finden wir die passende Lösung.
+          Ob einmalige Unterstützung oder regelmäßige Hilfe –
+          kontaktieren Sie mich ganz unverbindlich.
+          Gemeinsam finden wir die passende Lösung für Ihren Alltag.
 
         </p>
 
@@ -43,7 +43,15 @@
 
               <strong>Telefon</strong>
 
-              <p>+43 XXX XXX XXXX</p>
+              <p>
+
+                <a href="tel:+436604623979">
+
+                  0660 / 462 39 79
+
+                </a>
+
+              </p>
 
             </div>
 
@@ -61,7 +69,15 @@
 
               <strong>E-Mail</strong>
 
-              <p>info@alltagsservice.at</p>
+              <p>
+
+                <a href="mailto:alltagsservice@chello.at">
+
+                  alltagsservice@chello.at
+
+                </a>
+
+              </p>
 
             </div>
 
@@ -79,7 +95,11 @@
 
               <strong>Einsatzgebiet</strong>
 
-              <p>Wien & Umgebung</p>
+              <p>
+
+                Osten Wiens & Umgebung
+
+              </p>
 
             </div>
 
@@ -97,7 +117,13 @@
 
               <strong>Erreichbarkeit</strong>
 
-              <p>Montag bis Freitag<br>08:00 – 18:00 Uhr</p>
+              <p>
+
+                Montag bis Sonntag<br>
+
+                08:00 – 18:00 Uhr
+
+              </p>
 
             </div>
 
@@ -109,12 +135,21 @@
 
       <div class="contact-form">
 
-        <form>
+        <form
+          name="Kontakt"
+          method="POST"
+          data-netlify="true">
+
+          <input
+            type="hidden"
+            name="form-name"
+            value="Kontakt">
 
           <div class="form-row">
 
             <input
               type="text"
+              name="name"
               placeholder="Ihr Name"
               required>
 
@@ -124,6 +159,7 @@
 
             <input
               type="email"
+              name="email"
               placeholder="Ihre E-Mail"
               required>
 
@@ -133,6 +169,7 @@
 
             <input
               type="tel"
+              name="telefon"
               placeholder="Telefon (optional)">
 
           </div>
@@ -140,16 +177,17 @@
           <div class="form-row">
 
             <textarea
+              name="nachricht"
+              rows="7"
               placeholder="Wie kann ich Ihnen helfen?"
-              rows="7"></textarea>
+              required></textarea>
 
           </div>
-
           <button
             class="btn"
             type="submit">
 
-            Nachricht senden
+            Anfrage senden
 
           </button>
 
@@ -259,6 +297,22 @@ color:var(--petrol);
 
 }
 
+.contact-item a{
+
+color:var(--petrol);
+
+font-weight:600;
+
+transition:.25s;
+
+}
+
+.contact-item a:hover{
+
+color:var(--orange);
+
+}
+
 .contact-form{
 
 background:white;
@@ -270,6 +324,7 @@ border-radius:28px;
 box-shadow:var(--shadow);
 
 }
+
 .contact-form form{
 
 display:flex;
@@ -286,51 +341,11 @@ width:100%;
 
 }
 
-.contact-form input,
-.contact-form textarea{
-
-width:100%;
-
-padding:16px 18px;
-
-border:1px solid #d9d9d9;
-
-border-radius:16px;
-
-font-family:inherit;
-
-font-size:1rem;
-
-background:white;
-
-transition:.30s;
-
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-
-outline:none;
-
-border-color:var(--petrol);
-
-box-shadow:0 0 0 3px rgba(47,109,115,.15);
-
-}
-
-.contact-form textarea{
-
-resize:vertical;
-
-min-height:180px;
-
-}
-
 .contact-form .btn{
 
-margin-top:10px;
-
 width:100%;
+
+margin-top:10px;
 
 }
 
