@@ -1,22 +1,20 @@
 ---
 import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
-import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import WhyMe from "../components/WhyMe.astro";
+import Layout from "../layouts/Layout.astro";
 import Services from "../components/Services.astro";
+import WhyMe from "../components/WhyMe.astro";
 ---
 
 <Layout>
-  <main>
-    <Hero />
+  <Hero />
 
-<WhyMe />
+  <Services />
 
-<Services />
+  <WhyMe />
 
-<About />
+  <About />
 
-<Contact />
-  </main>
+  <Contact />
 </Layout>

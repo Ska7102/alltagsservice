@@ -1,0 +1,266 @@
+---
+---
+
+<header class="header">
+  <div class="container header-inner">
+
+    <a href="/" class="logo">
+      <span class="logo-icon">🏡</span>
+
+      <div class="logo-text">
+        <strong>Alltagsservice</strong>
+        <small>Persönlich & zuverlässig</small>
+      </div>
+    </a>
+
+    <button
+      id="menuButton"
+      class="menu-button"
+      aria-label="Menü öffnen"
+      aria-expanded="false">
+
+      ☰
+
+    </button>
+
+    <nav id="mainMenu" class="navigation">
+
+      <a href="/">Start</a>
+
+      <a href="#services">Leistungen</a>
+
+      <a href="#about">Über mich</a>
+
+      <a href="#contact">Kontakt</a>
+
+      <a href="#contact" class="cta">
+        Jetzt anfragen
+      </a>
+
+    </nav>
+
+  </div>
+</header>
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const menu = document.getElementById("mainMenu");
+
+  menuButton?.addEventListener("click", () => {
+    menu?.classList.toggle("open");
+
+    const expanded =
+      menuButton.getAttribute("aria-expanded") === "true";
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      (!expanded).toString()
+    );
+  });
+</script>
+
+<style>
+
+.header{
+
+position:sticky;
+
+top:0;
+
+z-index:9999;
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 6px 25px rgba(0,0,0,.06);
+
+}
+
+.header-inner{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+height:84px;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+}
+
+.logo-icon{
+
+font-size:2rem;
+
+}
+
+.logo strong{
+
+display:block;
+
+font-size:1.25rem;
+
+color:var(--petrol);
+
+}
+
+.logo small{
+
+display:block;
+
+font-size:.82rem;
+
+color:#666;
+
+}
+
+.navigation{
+
+display:flex;
+
+align-items:center;
+
+gap:34px;
+
+}
+
+.navigation a{
+
+font-weight:600;
+
+transition:.25s;
+
+position:relative;
+
+}
+
+.navigation a:hover{
+
+color:var(--orange);
+
+}
+
+.navigation a:not(.cta)::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:var(--orange);
+
+transition:.3s;
+
+}
+
+.navigation a:not(.cta):hover::after{
+
+width:100%;
+
+}
+
+.cta{
+
+background:var(--orange);
+
+padding:13px 24px;
+
+border-radius:999px;
+
+color:white !important;
+
+box-shadow:var(--shadow);
+
+transition:.25s;
+
+}
+
+.cta:hover{
+
+transform:translateY(-2px);
+
+}
+
+.menu-button{
+
+display:none;
+
+background:none;
+
+border:none;
+
+font-size:2rem;
+
+cursor:pointer;
+
+color:var(--petrol);
+
+}
+
+@media(max-width:900px){
+
+.menu-button{
+
+display:block;
+
+}
+
+.navigation{
+
+position:absolute;
+
+top:84px;
+
+left:0;
+
+right:0;
+
+display:none;
+
+flex-direction:column;
+
+background:white;
+
+padding:30px;
+
+gap:24px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.navigation.open{
+
+display:flex;
+
+}
+
+.cta{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+</style>
