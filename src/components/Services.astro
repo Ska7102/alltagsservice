@@ -1,192 +1,135 @@
 ---
+
+const services = [
+
+{
+icon:"🧹",
+title:"Haushalt",
+text:"Unterstützung beim Putzen, Aufräumen, Wäsche, Fenster putzen sowie vielen weiteren alltäglichen Arbeiten."
+},
+
+{
+icon:"🌿",
+title:"Garten",
+text:"Rasen mähen, Hecken schneiden, Laub entfernen, Unkraut jäten und allgemeine Gartenpflege."
+},
+
+{
+icon:"🛒",
+title:"Einkäufe",
+text:"Einkäufe, Apothekengänge, Besorgungen oder kleine Erledigungen zuverlässig und pünktlich erledigt."
+},
+
+{
+icon:"🚗",
+title:"Fahrdienste",
+text:"Begleitung zu Ärzten, Behörden, Terminen oder privaten Besorgungen im Raum Wien."
+},
+
+{
+icon:"🔧",
+title:"Kleine Reparaturen",
+text:"Bilder aufhängen, Möbel montieren, Lampen wechseln und kleinere Arbeiten im Haushalt."
+},
+
+{
+icon:"❤️",
+title:"Persönliche Begleitung",
+text:"Gesellschaft leisten, Spaziergänge oder Unterstützung bei wichtigen Terminen."
+}
+
+];
+
 ---
 
 <section id="services">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-header">
+<div class="section-header">
 
-      <span class="section-eyebrow">
-        Leistungen
-      </span>
+<span class="section-eyebrow">
 
-      <h2 class="section-title">
-        Unterstützung, genau dort,
-        <br>
-        wo Sie sie brauchen.
-      </h2>
+Leistungen
 
-      <p class="section-subtitle">
-        Jeder Alltag ist anders. Deshalb können Sie alle Leistungen
-        einzeln oder kombiniert buchen – einmalig oder regelmäßig.
-      </p>
+</span>
 
-    </div>
+<h2 class="section-title">
 
-    <div class="services-grid">
+Unterstützung,
+<br>
 
-      <article class="service-card">
+genau dort,
+wo Sie sie brauchen.
 
-        <div class="service-icon">
-          🧹
-        </div>
+</h2>
 
-        <h3>Haushalt</h3>
+<p class="section-subtitle">
 
-        <p>
+Jeder Alltag ist anders.
 
-          Unterstützung beim Putzen,
-          Aufräumen, Wäsche, Fenster putzen,
-          Küchenarbeiten und vielen weiteren
-          alltäglichen Aufgaben.
+Deshalb können Sie alle Leistungen
+einzeln oder kombiniert buchen –
+einmalig oder regelmäßig.
 
-        </p>
+</p>
 
-        <a href="#contact">
+</div>
 
-          Mehr erfahren →
+<div class="services-grid">
 
-        </a>
+{
 
-      </article>
+services.map((service)=>(
 
-      <article class="service-card">
+<article class="service-card">
 
-        <div class="service-icon">
-          🌿
-        </div>
+<div class="service-icon">
 
-        <h3>Garten</h3>
+{service.icon}
 
-        <p>
+</div>
 
-          Rasen mähen, Hecken schneiden,
-          Unkraut entfernen,
-          Laub beseitigen und
-          allgemeine Gartenpflege.
+<h3>
 
-        </p>
+{service.title}
 
-        <a href="#contact">
+</h3>
 
-          Mehr erfahren →
+<p>
 
-        </a>
+{service.text}
 
-      </article>
+</p>
 
-      <article class="service-card">
+<a
+href="#contact"
+class="service-link">
 
-        <div class="service-icon">
-          🛒
-        </div>
+Mehr erfahren →
 
-        <h3>Einkäufe</h3>
+</a>
 
-        <p>
+</article>
 
-          Einkäufe, Apothekengänge,
-          Besorgungen oder kleine Erledigungen –
-          zuverlässig und pünktlich.
+))
 
-        </p>
+}
 
-        <a href="#contact">
+</div>
 
-          Mehr erfahren →
-
-        </a>
-
-      </article>
-
-      <article class="service-card">
-
-        <div class="service-icon">
-          🚗
-        </div>
-
-        <h3>Fahrdienste</h3>
-
-        <p>
-
-          Begleitung zu Ärzten,
-          Behörden,
-          Terminen oder
-          privaten Besorgungen.
-
-        </p>
-
-        <a href="#contact">
-
-          Mehr erfahren →
-
-        </a>
-
-      </article>
-
-      <article class="service-card">
-
-        <div class="service-icon">
-          🔧
-        </div>
-
-        <h3>Kleine Reparaturen</h3>
-
-        <p>
-
-          Bilder aufhängen,
-          Möbel montieren,
-          Lampen wechseln
-          und kleinere Arbeiten
-          im Haushalt.
-
-        </p>
-
-        <a href="#contact">
-
-          Mehr erfahren →
-
-        </a>
-
-      </article>
-
-      <article class="service-card">
-
-        <div class="service-icon">
-          ❤️
-        </div>
-
-        <h3>Persönliche Begleitung</h3>
-
-        <p>
-
-          Gesellschaft leisten,
-          Spaziergänge,
-          Unterstützung im Alltag
-          oder Begleitung zu wichtigen Terminen.
-
-        </p>
-
-        <a href="#contact">
-
-          Mehr erfahren →
-
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
-
 <style>
 
 #services{
 
 background:white;
+
+position:relative;
+
+overflow:hidden;
 
 }
 
@@ -198,31 +141,13 @@ margin-bottom:70px;
 
 }
 
-.section-eyebrow{
-
-display:inline-block;
-
-padding:10px 20px;
-
-border-radius:999px;
-
-background:#EAF5F3;
-
-color:var(--petrol);
-
-font-weight:700;
-
-margin-bottom:20px;
-
-}
-
 .services-grid{
 
 display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:30px;
+gap:32px;
 
 }
 
@@ -230,37 +155,77 @@ gap:30px;
 
 background:white;
 
-border-radius:24px;
+border-radius:28px;
 
-padding:36px;
-
-box-shadow:var(--shadow);
+padding:38px;
 
 display:flex;
 
 flex-direction:column;
 
-transition:.30s;
-
 height:100%;
+
+box-shadow:0 10px 35px rgba(0,0,0,.06);
+
+border:1px solid rgba(47,109,115,.06);
+
+transition:all .35s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.service-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(
+90deg,
+var(--petrol),
+var(--orange)
+);
+
+transform:scaleX(0);
+
+transform-origin:left;
+
+transition:.35s;
 
 }
 
 .service-card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-10px);
 
-box-shadow:var(--shadow-hover);
+box-shadow:0 22px 45px rgba(0,0,0,.12);
+
+}
+
+.service-card:hover::before{
+
+transform:scaleX(1);
 
 }
 
 .service-icon{
 
-width:74px;
+width:82px;
 
-height:74px;
+height:82px;
 
-border-radius:20px;
+border-radius:24px;
 
 background:#EAF5F3;
 
@@ -270,17 +235,21 @@ justify-content:center;
 
 align-items:center;
 
-font-size:2rem;
+font-size:2.3rem;
 
-margin-bottom:24px;
+margin-bottom:28px;
 
-transition:.30s;
+transition:.35s;
 
 }
 
 .service-card:hover .service-icon{
 
-transform:scale(1.08) rotate(4deg);
+transform:rotate(6deg) scale(1.08);
+
+background:var(--petrol);
+
+color:white;
 
 }
 
@@ -288,23 +257,21 @@ transform:scale(1.08) rotate(4deg);
 
 margin-bottom:18px;
 
+font-size:1.4rem;
+
 }
 
 .service-card p{
 
-margin-bottom:30px;
-
 flex:1;
+
+margin-bottom:32px;
+
+line-height:1.85;
 
 }
 
-.service-card a{
-
-font-weight:700;
-
-color:var(--petrol);
-
-transition:.25s;
+.service-link{
 
 display:inline-flex;
 
@@ -312,12 +279,19 @@ align-items:center;
 
 gap:8px;
 
+font-weight:700;
+
+color:var(--petrol);
+
+transition:.3s;
+
 }
-.service-card a:hover{
+
+.service-link:hover{
+
+gap:14px;
 
 color:var(--orange);
-
-transform:translateX(6px);
 
 }
 
@@ -363,13 +337,13 @@ padding:30px;
 
 .service-icon{
 
-width:64px;
+width:70px;
 
-height:64px;
+height:70px;
 
-font-size:1.8rem;
+font-size:2rem;
 
-margin-bottom:20px;
+margin-bottom:22px;
 
 }
 
