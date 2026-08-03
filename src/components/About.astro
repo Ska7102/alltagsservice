@@ -8,24 +8,56 @@ import portrait from "../assets/images/portrait.png";
 
     <div class="about-grid">
 
-      <!-- Bild -->
+      <!-- ==========================
+           LINKE SPALTE
+      =========================== -->
 
-      <div class="about-image fade-up">
+      <div class="about-left fade-up">
 
-        <div class="portrait-circle"></div>
+        <div class="about-image">
 
-        <img
-          src={portrait.src}
-          alt="Sascha Kattenberg"
-          class="portrait"
-          width="460"
-          height="560"
-          loading="lazy"
-        />
+          <div class="portrait-circle"></div>
+
+          <img
+            src={portrait.src}
+            alt="Sascha Kattenberg"
+            class="portrait"
+            width="460"
+            height="560"
+            loading="lazy"
+          />
+
+        </div>
+
+        <blockquote>
+
+          „Ich unterstütze Sie so,
+          wie ich selbst Unterstützung
+          erwarten würde.“
+
+        </blockquote>
+
+        <div class="signature">
+
+          <strong>
+
+            Sascha Kattenberg
+
+          </strong>
+
+          <span>
+
+            Inhaber · Alltagsservice Wien
+
+          </span>
+
+        </div>
 
       </div>
 
-      <!-- Text -->
+      <!-- ==========================
+           RECHTE SPALTE
+      =========================== -->
 
       <div class="about-content fade-up">
 
@@ -59,18 +91,8 @@ import portrait from "../assets/images/portrait.png";
           freundlich
           und mit viel Engagement.
 
-          Mir ist wichtig,
-          dass Sie sich jederzeit
-          gut aufgehoben fühlen.
-
-        </p>
-
-        <p>
-
-          Ich bin überzeugt:
-
           Gute Unterstützung beginnt
-          mit Vertrauen,
+          für mich mit Vertrauen,
           gegenseitigem Respekt
           und einem offenen Ohr
           für Ihre Wünsche.
@@ -162,30 +184,6 @@ import portrait from "../assets/images/portrait.png";
 
         </div>
 
-        <blockquote>
-
-          „Ich unterstütze Sie so,
-          wie ich selbst Unterstützung
-          erwarten würde.“
-
-        </blockquote>
-
-        <div class="signature">
-
-          <strong>
-
-            Sascha Kattenberg
-
-          </strong>
-
-          <span>
-
-            Inhaber · Alltagsservice Wien
-
-          </span>
-
-        </div>
-
       </div>
 
     </div>
@@ -207,13 +205,31 @@ overflow:hidden;
 
 }
 
+/* ==========================================
+   GRID
+========================================== */
+
 .about-grid{
 
 display:grid;
 
-grid-template-columns:480px 1fr;
+grid-template-columns:420px 1fr;
 
 gap:90px;
+
+align-items:start;
+
+}
+
+/* ==========================================
+   LINKE SPALTE
+========================================== */
+
+.about-left{
+
+display:flex;
+
+flex-direction:column;
 
 align-items:center;
 
@@ -227,9 +243,9 @@ display:flex;
 
 justify-content:center;
 
-align-items:center;
+align-items:flex-start;
 
-min-height:620px;
+margin-bottom:35px;
 
 }
 
@@ -257,6 +273,8 @@ transparent 100%
 
 z-index:1;
 
+animation:pulseCircle 10s ease-in-out infinite;
+
 }
 
 .portrait{
@@ -269,9 +287,11 @@ height:auto;
 
 z-index:2;
 
-filter:drop-shadow(0 25px 45px rgba(0,0,0,.16));
+filter:drop-shadow(0 24px 45px rgba(0,0,0,.16));
 
 transition:.35s;
+
+animation:floatPortrait 8s ease-in-out infinite;
 
 }
 
@@ -281,15 +301,77 @@ transform:translateY(-8px) scale(1.02);
 
 }
 
+/* ==========================================
+   ZITAT
+========================================== */
+
+blockquote{
+
+width:100%;
+
+padding:24px 28px;
+
+background:#F5F7F6;
+
+border-left:6px solid var(--orange);
+
+border-radius:0 18px 18px 0;
+
+font-size:1.1rem;
+
+font-style:italic;
+
+color:var(--petrol);
+
+line-height:1.8;
+
+margin-bottom:26px;
+
+}
+
+.signature{
+
+width:100%;
+
+padding-top:20px;
+
+border-top:2px solid rgba(47,109,115,.08);
+
+display:flex;
+
+flex-direction:column;
+
+gap:6px;
+
+}
+
+.signature strong{
+
+font-size:1.3rem;
+
+color:var(--petrol);
+
+}
+
+.signature span{
+
+color:var(--text-light);
+
+}
+
+/* ==========================================
+   RECHTE SPALTE
+========================================== */
+
 .about-content{
 
-max-width:640px;
+max-width:650px;
 
 }
 
 .about-content h2{
 
-margin-bottom:18px;
+margin:16px 0 20px;
 
 }
 
@@ -297,29 +379,33 @@ margin-bottom:18px;
 
 font-size:1.18rem;
 
-margin-bottom:30px;
+font-weight:500;
 
 color:var(--petrol);
 
-font-weight:500;
+margin-bottom:30px;
 
 }
 
 .about-content p{
 
-margin-bottom:22px;
-
 line-height:1.9;
 
+margin-bottom:24px;
+
 }
+
+/* ==========================================
+   KARTEN
+========================================== */
 
 .about-values{
 
 display:grid;
 
-gap:20px;
+gap:18px;
 
-margin:42px 0;
+margin-top:40px;
 
 }
 
@@ -367,7 +453,7 @@ justify-content:center;
 
 align-items:center;
 
-font-size:1.6rem;
+font-size:1.5rem;
 
 flex-shrink:0;
 
@@ -399,65 +485,14 @@ font-size:1.05rem;
 
 margin:0;
 
-font-size:.98rem;
+font-size:.97rem;
 
 line-height:1.6;
 
 }
 
-blockquote{
-
-margin-top:45px;
-
-padding:26px 28px;
-
-background:#F5F7F6;
-
-border-left:6px solid var(--orange);
-
-border-radius:0 18px 18px 0;
-
-font-size:1.15rem;
-
-font-style:italic;
-
-color:var(--petrol);
-
-line-height:1.8;
-
-}
-
-.signature{
-
-margin-top:30px;
-
-padding-top:22px;
-
-border-top:2px solid rgba(47,109,115,.08);
-
-display:flex;
-
-flex-direction:column;
-
-gap:6px;
-
-}
-
-.signature strong{
-
-font-size:1.3rem;
-
-color:var(--petrol);
-
-}
-
-.signature span{
-
-color:var(--text-light);
-
-}
 /* ==========================================
-   Premium Animationen
+   ANIMATIONEN
 ========================================== */
 
 .fade-up{
@@ -496,64 +531,28 @@ transform:translateY(0);
 
 }
 
-.portrait{
-
-animation:floatPortrait 8s ease-in-out infinite;
-
-}
-
 @keyframes floatPortrait{
 
-0%{
+0%{transform:translateY(0);}
 
-transform:translateY(0px);
+50%{transform:translateY(-10px);}
 
-}
-
-50%{
-
-transform:translateY(-10px);
-
-}
-
-100%{
-
-transform:translateY(0px);
-
-}
-
-}
-
-.portrait-circle{
-
-animation:pulseCircle 10s ease-in-out infinite;
+100%{transform:translateY(0);}
 
 }
 
 @keyframes pulseCircle{
 
-0%{
+0%{transform:scale(1);}
 
-transform:scale(1);
+50%{transform:scale(1.04);}
 
-}
-
-50%{
-
-transform:scale(1.04);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
+100%{transform:scale(1);}
 
 }
 
 /* ==========================================
-   Responsive
+   TABLET
 ========================================== */
 
 @media(max-width:1100px){
@@ -564,33 +563,21 @@ grid-template-columns:1fr;
 
 gap:60px;
 
-text-align:center;
+}
+
+.about-left{
+
+order:1;
 
 }
 
 .about-content{
 
+order:2;
+
 max-width:100%;
 
-}
-
-.about-image{
-
-min-height:auto;
-
-}
-
-.about-values{
-
-max-width:620px;
-
-margin:40px auto;
-
-}
-
-.value{
-
-text-align:left;
+text-align:center;
 
 }
 
@@ -606,15 +593,31 @@ align-items:center;
 
 }
 
+.about-values{
+
+max-width:620px;
+
+margin:40px auto 0;
+
 }
+
+}
+
+/* ==========================================
+   SMARTPHONE
+========================================== */
 
 @media(max-width:768px){
 
 #about{
 
-padding-top:80px;
+padding:80px 0;
 
-padding-bottom:80px;
+}
+
+.portrait{
+
+width:260px;
 
 }
 
@@ -623,12 +626,6 @@ padding-bottom:80px;
 width:300px;
 
 height:300px;
-
-}
-
-.portrait{
-
-width:250px;
 
 }
 
@@ -644,12 +641,6 @@ font-size:1.05rem;
 
 }
 
-.about-values{
-
-gap:16px;
-
-}
-
 .value{
 
 padding:16px 18px;
@@ -662,15 +653,15 @@ width:48px;
 
 height:48px;
 
-font-size:1.3rem;
+font-size:1.25rem;
 
 }
 
 blockquote{
 
-font-size:1rem;
-
 padding:20px;
+
+font-size:1rem;
 
 }
 
@@ -690,24 +681,6 @@ font-size:1.8rem;
 
 }
 
-.value{
-
-gap:14px;
-
-}
-
-.value strong{
-
-font-size:1rem;
-
-}
-
-.value p{
-
-font-size:.92rem;
-
-}
-
 .signature strong{
 
 font-size:1.15rem;
@@ -715,9 +688,5 @@ font-size:1.15rem;
 }
 
 }
-
-/* ==========================================
-   Ende About V4
-========================================== */
 
 </style>
