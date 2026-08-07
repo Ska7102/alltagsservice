@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {
-  title = "Alltagsservice Wien | Haushalt, Einkauf & Alltagshilfe in Wien"
+  title = "Alltagsservice Wien 1210, 1220 & 1020 | Persönliche Unterstützung im Alltag"
 } = Astro.props;
 ---
 
@@ -25,13 +25,17 @@ const {
 
 <title>{title}</title>
 
+<!-- ==========================================
+     Basis SEO
+========================================== -->
+
 <meta
   name="description"
-  content="Alltagsservice Wien – Persönliche Hilfe im Haushalt, Einkauf, Garten, Begleitung und Alltagshilfe in Wien und Umgebung. Zuverlässig, freundlich und flexibel." />
+  content="Persönliche Unterstützung im Alltag in Wien. Besonders in 1210 Floridsdorf, 1220 Donaustadt und 1020 Leopoldstadt. Hilfe bei Einkäufen, Begleitungen, Gartenarbeiten, Organisation im Haushalt und vielen weiteren alltäglichen Aufgaben." />
 
 <meta
   name="keywords"
-  content="Alltagsservice Wien, Alltagshilfe Wien, Haushaltshilfe Wien, Einkaufsservice Wien, Begleitservice Wien, Gartenhilfe Wien, Hilfe im Alltag Wien" />
+  content="Alltagsservice Wien, Alltagsservice 1210, Alltagsservice 1220, Alltagsservice 1020, Alltagshilfe Wien, Alltagshilfe Floridsdorf, Alltagshilfe Donaustadt, Alltagshilfe Leopoldstadt, Unterstützung im Alltag Wien, Einkaufsservice Wien, Begleitservice Wien, Gartenhilfe Wien, Seniorenhilfe Wien" />
 
 <meta
   name="author"
@@ -53,7 +57,9 @@ const {
   rel="canonical"
   href="https://alltagsservices.netlify.app/" />
 
-<!-- Open Graph -->
+<!-- ==========================================
+     Open Graph
+========================================== -->
 
 <meta
   property="og:type"
@@ -64,26 +70,32 @@ const {
   content="de_AT" />
 
 <meta
+  property="og:site_name"
+  content="Alltagsservice Wien" />
+
+<meta
   property="og:title"
-  content="Alltagsservice Wien | Haushalt, Einkauf & Alltagshilfe in Wien" />
+  content="Alltagsservice Wien 1210, 1220 & 1020 | Persönliche Unterstützung im Alltag" />
 
 <meta
   property="og:description"
-  content="Persönliche Unterstützung im Alltag in Wien und Umgebung. Haushalt, Einkäufe, Gartenarbeiten, Begleitung und vieles mehr." />
+  content="Persönliche Unterstützung im Alltag in Floridsdorf, Donaustadt und Leopoldstadt. Zuverlässig, freundlich und flexibel." />
 
 <meta
   property="og:url"
   content="https://alltagsservices.netlify.app/" />
 
 <meta
-  property="og:site_name"
-  content="Alltagsservice" />
+  property="og:image"
+  content="https://alltagsservices.netlify.app/images/logo.png" />
 
 <meta
-  property="og:image"
-  content="https://alltagsservices.netlify.app/images/hero.jpg" />
+  property="og:image:alt"
+  content="Logo Alltagsservice Wien" />
 
-<!-- Twitter / X -->
+<!-- ==========================================
+     Twitter / X
+========================================== -->
 
 <meta
   name="twitter:card"
@@ -91,15 +103,18 @@ const {
 
 <meta
   name="twitter:title"
-  content="Alltagsservice Wien | Haushalt, Einkauf & Alltagshilfe in Wien" />
+  content="Alltagsservice Wien 1210, 1220 & 1020" />
 
 <meta
   name="twitter:description"
-  content="Persönliche Hilfe im Alltag in Wien und Umgebung." />
+  content="Persönliche Unterstützung im Alltag in Wien. Zuverlässig, freundlich und flexibel." />
 
 <meta
   name="twitter:image"
-  content="https://alltagsservices.netlify.app/images/hero.jpg" />
+  content="https://alltagsservices.netlify.app/images/logo.png" />
+<!-- ==========================================
+     Strukturierte Unternehmensdaten
+========================================== -->
 
 <script
   type="application/ld+json"
@@ -107,29 +122,102 @@ const {
 
 {
   "@context":"https://schema.org",
+
   "@type":"LocalBusiness",
-  "name":"Alltagsservice",
+
+  "name":"Alltagsservice Wien",
+
   "url":"https://alltagsservices.netlify.app",
-  "image":"https://alltagsservices.netlify.app/images/hero.jpg",
+
+  "logo":"https://alltagsservices.netlify.app/images/logo.png",
+
+  "image":"https://alltagsservices.netlify.app/images/logo.png",
+
   "telephone":"+436604623979",
+
   "email":"alltagsservice@chello.at",
-  "address":{
-    "@type":"PostalAddress",
-    "streetAddress":"Rugierstraße 28/4/4",
-    "postalCode":"1220",
-    "addressLocality":"Wien",
-    "addressCountry":"AT"
-  },
-  "areaServed":"Osten Wiens und Umgebung",
-  "openingHours":"Mo-Su 08:00-18:00",
+
   "priceRange":"€",
-  "description":"Persönliche Unterstützung im Alltag. Haushalt, Einkäufe, Gartenarbeiten, Begleitung und kleine Reparaturen.",
-  "sameAs":[
-    "https://alltagsservices.netlify.app"
+
+  "description":"Persönliche Unterstützung im Alltag in Wien. Zuverlässige Hilfe bei Einkäufen, Begleitungen, Organisation im Haushalt, Gartenarbeiten und vielen weiteren alltäglichen Aufgaben.",
+
+  "address":{
+
+    "@type":"PostalAddress",
+
+    "streetAddress":"Rugierstraße 28/4/4",
+
+    "postalCode":"1220",
+
+    "addressLocality":"Wien",
+
+    "addressRegion":"Wien",
+
+    "addressCountry":"AT"
+
+  },
+
+  "areaServed":[
+
+    {
+
+      "@type":"City",
+
+      "name":"1210 Wien"
+
+    },
+
+    {
+
+      "@type":"City",
+
+      "name":"1220 Wien"
+
+    },
+
+    {
+
+      "@type":"City",
+
+      "name":"1020 Wien"
+
+    }
+
+  ],
+
+  "openingHoursSpecification":[
+
+    {
+
+      "@type":"OpeningHoursSpecification",
+
+      "dayOfWeek":[
+
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+
+      ],
+
+      "opens":"08:00",
+
+      "closes":"18:00"
+
+    }
+
   ]
+
 }
 
 </script>
+
+<!-- ==========================================
+     Google Fonts
+========================================== -->
 
 <link
   rel="preconnect"
@@ -144,10 +232,22 @@ const {
   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
   rel="stylesheet" />
 
+<!-- ==========================================
+     Favicon
+========================================== -->
+
 <link
   rel="icon"
-  type="image/svg+xml"
-  href="/favicon.svg" />
+  type="image/png"
+  href="/images/logo.png" />
+
+<link
+  rel="apple-touch-icon"
+  href="/images/logo.png" />
+
+<!-- ==========================================
+     Globales Stylesheet
+========================================== -->
 
 <style is:global>
 :root{
@@ -175,9 +275,9 @@ const {
 
 }
 
-/* ------------------------------------------------ */
-/* RESET */
-/* ------------------------------------------------ */
+/* ==========================================
+   RESET
+========================================== */
 
 *,
 *::before,
@@ -206,6 +306,12 @@ color:var(--text);
 line-height:1.7;
 
 overflow-x:hidden;
+
+text-rendering:optimizeLegibility;
+
+-webkit-font-smoothing:antialiased;
+
+-moz-osx-font-smoothing:grayscale;
 
 }
 
@@ -251,9 +357,9 @@ padding:110px 0;
 
 }
 
-/* ------------------------------------------------ */
-/* TYPOGRAFIE */
-/* ------------------------------------------------ */
+/* ==========================================
+   TYPOGRAFIE
+========================================== */
 
 h1{
 
@@ -351,9 +457,9 @@ margin-bottom:22px;
 
 }
 
-/* ------------------------------------------------ */
-/* BUTTONS */
-/* ------------------------------------------------ */
+/* ==========================================
+   BUTTONS
+========================================== */
 
 .btn{
 
@@ -402,9 +508,10 @@ border:2px solid var(--petrol);
 color:var(--petrol);
 
 }
-/* ------------------------------------------------ */
-/* CARDS */
-/* ------------------------------------------------ */
+
+/* ==========================================
+   CARDS
+========================================== */
 
 .card{
 
@@ -464,9 +571,9 @@ transform:scale(1.08);
 
 }
 
-/* ------------------------------------------------ */
-/* GRID */
-/* ------------------------------------------------ */
+/* ==========================================
+   GRID
+========================================== */
 
 .grid{
 
@@ -488,9 +595,9 @@ grid-template-columns:repeat(3,1fr);
 
 }
 
-/* ------------------------------------------------ */
-/* ABSTÄNDE */
-/* ------------------------------------------------ */
+/* ==========================================
+   ABSTÄNDE
+========================================== */
 
 .mt-1{margin-top:1rem;}
 .mt-2{margin-top:2rem;}
@@ -502,9 +609,9 @@ grid-template-columns:repeat(3,1fr);
 .mb-3{margin-bottom:3rem;}
 .mb-4{margin-bottom:4rem;}
 
-/* ------------------------------------------------ */
-/* ANIMATION */
-/* ------------------------------------------------ */
+/* ==========================================
+   ANIMATIONEN
+========================================== */
 
 .fade-up{
 
@@ -532,9 +639,9 @@ transform:none;
 
 }
 
-/* ------------------------------------------------ */
-/* FORMULARE */
-/* ------------------------------------------------ */
+/* ==========================================
+   FORMULARE
+========================================== */
 
 input,
 textarea{
@@ -576,9 +683,9 @@ min-height:180px;
 
 }
 
-/* ------------------------------------------------ */
-/* RESPONSIVE */
-/* ------------------------------------------------ */
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
 @media(max-width:1024px){
 
@@ -666,6 +773,7 @@ padding:65px 0;
 }
 
 }
+
 </style>
 
 </head>

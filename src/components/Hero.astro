@@ -3,29 +3,42 @@
 ---
 
 <section id="hero" class="hero">
+
   <div class="container hero-grid">
 
     <div class="hero-content fade-up">
 
       <span class="hero-badge">
 
-        Persönlich • Zuverlässig • Flexibel
+        1220 Donaustadt • 1210 Floridsdorf • Weitere Bezirke auf Anfrage
 
       </span>
 
       <h1>
 
-        Hilfe im Alltag –
+        Persönliche Unterstützung
         <br>
-        persönlich & zuverlässig.
+        im Alltag in Wien.
 
       </h1>
 
       <p>
 
-        Ob Haushalt, Garten, Einkäufe oder Begleitung –
-        ich unterstütze Sie zuverlässig, freundlich und genau dort,
-        wo Sie Hilfe benötigen.
+        Ihr Alltagsservice für
+        <strong> 1220 Donaustadt </strong>
+        und
+        <strong> 1210 Floridsdorf. </strong>
+
+        Ich erledige für Sie zuverlässig
+        <strong> Gartenarbeiten</strong>,
+        <strong> Möbelmontagen & Kleinreparaturen</strong>,
+        <strong> Handy-, Computer- und Technikprobleme</strong>,
+        <strong> Haushalt & Besorgungen </strong>
+        sowie
+        <strong> Gesellschaft & Unterstützung</strong>.
+
+        Weitere Wiener Bezirke gerne
+        nach Vereinbarung.
 
       </p>
 
@@ -48,7 +61,6 @@
         </a>
 
       </div>
-
       <div class="hero-features">
 
         <div>
@@ -63,7 +75,7 @@
 
           <span>✔</span>
 
-          Flexible Termine
+          Flexible Termine nach Vereinbarung
 
         </div>
 
@@ -71,7 +83,7 @@
 
           <span>✔</span>
 
-          Unterstützung mit Herz
+          Regional in 1220 & 1210 Wien
 
         </div>
 
@@ -79,13 +91,15 @@
 
     </div>
 
+    <!-- Logo -->
+
     <div class="hero-logo fade-up">
 
       <div class="logo-circle"></div>
 
       <img
         src="/images/logo.png"
-        alt="Alltagsservice Logo"
+        alt="Logo Alltagsservice Wien"
         class="hero-image"
         width="360"
         height="360"
@@ -148,13 +162,15 @@ font-weight:700;
 
 margin-bottom:28px;
 
+font-size:.95rem;
+
 }
 
 .hero h1{
 
 margin-bottom:28px;
 
-max-width:620px;
+max-width:650px;
 
 }
 
@@ -162,9 +178,19 @@ max-width:620px;
 
 font-size:1.15rem;
 
-max-width:620px;
+max-width:650px;
 
-margin-bottom:40px;
+margin-bottom:42px;
+
+line-height:1.9;
+
+}
+
+.hero p strong{
+
+color:var(--petrol);
+
+font-weight:700;
 
 }
 
@@ -320,6 +346,10 @@ transform:scale(1);
 
 }
 
+/* ==========================================
+   Tablet
+========================================== */
+
 @media(max-width:1024px){
 
 .hero-grid{
@@ -328,7 +358,7 @@ grid-template-columns:1fr;
 
 text-align:center;
 
-gap:50px;
+gap:55px;
 
 padding-top:40px;
 
@@ -375,6 +405,10 @@ width:280px;
 
 }
 
+/* ==========================================
+   Smartphone
+========================================== */
+
 @media(max-width:768px){
 
 .hero{
@@ -385,15 +419,25 @@ padding-bottom:60px;
 
 }
 
+.hero-badge{
+
+font-size:.88rem;
+
+line-height:1.5;
+
+}
+
 .hero h1{
 
-font-size:2.6rem;
+font-size:2.5rem;
 
 }
 
 .hero p{
 
 font-size:1rem;
+
+line-height:1.8;
 
 }
 
@@ -418,6 +462,8 @@ max-width:320px;
 flex-direction:column;
 
 gap:14px;
+
+align-items:center;
 
 }
 

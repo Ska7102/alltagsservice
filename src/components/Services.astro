@@ -3,39 +3,39 @@
 const services = [
 
 {
-icon:"🧹",
-title:"Haushalt",
-text:"Unterstützung bei alltäglichen Aufgaben, Organisation im Haushalt, Wäsche, Einkäufen sowie vielen weiteren Hilfestellungen im täglichen Leben."
-},
-
-{
 icon:"🌿",
-title:"Garten",
-text:"Rasen mähen, Hecken schneiden, Laub entfernen, Unkraut jäten und allgemeine Gartenpflege."
-},
-
-{
-icon:"🛒",
-title:"Einkäufe",
-text:"Einkäufe, Apothekengänge, Besorgungen oder kleine Erledigungen zuverlässig und pünktlich erledigt."
-},
-
-{
-icon:"🚗",
-title:"Fahrdienste",
-text:"Begleitung zu Behörden, Terminen oder privaten Besorgungen im Raum Wien."
+title:"Hilfe bei Gartenarbeit",
+text:"Unterstützung bei der Gartenpflege wie Rasen mähen, Heckenschnitt, Unkraut entfernen, Laubarbeiten sowie vielen weiteren saisonalen Gartenarbeiten."
 },
 
 {
 icon:"🔧",
-title:"Kleine Reparaturen",
-text:"Bilder aufhängen, Möbel montieren, Lampen wechseln und kleinere Arbeiten im Haushalt."
+title:"Möbelmontage & Kleinreparaturen",
+text:"Unterstützung bei Möbelmontagen, Lampenwechsel, Bilder aufhängen sowie kleineren Reparaturen und handwerklichen Arbeiten im Haushalt."
 },
 
 {
-icon:"❤️",
-title:"Persönliche Begleitung",
-text:"Gesellschaft leisten, Spaziergänge oder Unterstützung bei wichtigen Terminen."
+icon:"💻",
+title:"Handy-, Computer- und Technikprobleme",
+text:"Hilfe bei der Einrichtung neuer Geräte, Internet, Smartphone, Computer sowie allgemeinen Technikproblemen – verständlich und persönlich erklärt."
+},
+
+{
+icon:"🏡",
+title:"Haushalt & Besorgungen",
+text:"Unterstützung bei Einkäufen, Besorgungen, Wäsche sowie der Organisation alltäglicher Aufgaben – zuverlässig und individuell."
+},
+
+{
+icon:"🤝",
+title:"Gesellschaft & Unterstützung",
+text:"Begleitung zu Arztterminen, Behörden oder Spaziergängen sowie persönliche Unterstützung und Gesellschaft im Alltag."
+},
+
+{
+icon:"❄️",
+title:"Fensterabdichtungen für mobile Klimageräte",
+text:"Saisonale Fensterabdichtungen für mobile Klimageräte – für angenehm kühle Räume und eine bessere Energieeffizienz im Sommer."
 }
 
 ];
@@ -66,11 +66,14 @@ wo Sie sie brauchen.
 
 <p class="section-subtitle">
 
-Jeder Alltag ist anders.
+Ihr persönlicher Alltagsservice für
+<strong> 1220 Donaustadt </strong>
+und
+<strong> 1210 Floridsdorf</strong>.
 
-Deshalb können Sie alle Leistungen
-einzeln oder kombiniert buchen –
-einmalig oder regelmäßig.
+Alle Leistungen können einzeln oder kombiniert,
+einmalig oder regelmäßig in Anspruch genommen werden.
+Weitere Wiener Bezirke gerne auf Anfrage.
 
 </p>
 
@@ -101,16 +104,15 @@ services.map((service)=>(
 {service.text}
 
 </p>
+      <a
+        href="#contact"
+        class="service-link">
 
-<a
-href="#contact"
-class="service-link">
+        Unverbindlich anfragen →
 
-Mehr erfahren →
+      </a>
 
-</a>
-
-</article>
+    </article>
 
 ))
 
@@ -148,6 +150,8 @@ display:grid;
 grid-template-columns:repeat(3,1fr);
 
 gap:32px;
+
+align-items:stretch;
 
 }
 
@@ -257,7 +261,17 @@ color:white;
 
 margin-bottom:18px;
 
-font-size:1.4rem;
+font-size:1.35rem;
+
+line-height:1.4;
+
+color:var(--petrol);
+
+min-height:76px;
+
+display:flex;
+
+align-items:center;
 
 }
 
@@ -284,6 +298,8 @@ font-weight:700;
 color:var(--petrol);
 
 transition:.3s;
+
+margin-top:auto;
 
 }
 
@@ -349,7 +365,9 @@ margin-bottom:22px;
 
 .service-card h3{
 
-font-size:1.3rem;
+font-size:1.25rem;
+
+min-height:auto;
 
 }
 
