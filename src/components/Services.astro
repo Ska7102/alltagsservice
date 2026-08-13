@@ -1,381 +1,421 @@
 ---
+import GartenarbeitIcon from "../assets/images/services/gartenarbeit.png";
+import MoebelmontageIcon from "../assets/images/services/moebelmontage.png";
+import TechnikIcon from "../assets/images/services/technik.png";
+import FensterIcon from "../assets/images/services/fensterabdichtungen.png";
+import HaushaltIcon from "../assets/images/services/haushalt-besorgungen.png";
+import GesellschaftIcon from "../assets/images/services/gesellschaft-unterstuetzung.png";
 
 const services = [
+  {
+    icon: GartenarbeitIcon,
+    color: "petrol",
+    title: "Hilfe bei Gartenarbeit",
+    text: "Unterstützung bei der Gartenpflege wie Rasen mähen, Heckenschnitt, Unkraut entfernen, Laubarbeiten sowie vielen weiteren saisonalen Gartenarbeiten."
+  },
 
-{
-icon:"🌿",
-title:"Hilfe bei Gartenarbeit",
-text:"Unterstützung bei der Gartenpflege wie Rasen mähen, Heckenschnitt, Unkraut entfernen, Laubarbeiten sowie vielen weiteren saisonalen Gartenarbeiten."
-},
+  {
+    icon: MoebelmontageIcon,
+    color: "orange",
+    title: "Möbelmontage & Kleinreparaturen",
+    text: "Unterstützung bei Möbelmontagen, Lampenwechsel, Bilder aufhängen sowie kleineren Reparaturen und handwerklichen Arbeiten im Haushalt."
+  },
 
-{
-icon:"🔧",
-title:"Möbelmontage & Kleinreparaturen",
-text:"Unterstützung bei Möbelmontagen, Lampenwechsel, Bilder aufhängen sowie kleineren Reparaturen und handwerklichen Arbeiten im Haushalt."
-},
+  {
+    icon: TechnikIcon,
+    color: "petrol",
+    title: "Handy-, Computer- und Technikprobleme",
+    text: "Hilfe bei der Einrichtung neuer Geräte, Internet, Smartphone, Computer sowie allgemeinen Technikproblemen – verständlich und persönlich erklärt."
+  },
 
-{
-icon:"💻",
-title:"Handy-, Computer- und Technikprobleme",
-text:"Hilfe bei der Einrichtung neuer Geräte, Internet, Smartphone, Computer sowie allgemeinen Technikproblemen – verständlich und persönlich erklärt."
-},
+  {
+    icon: FensterIcon,
+    color: "orange",
+    title: "Fensterabdichtungen für mobile Klimageräte",
+    text: "Saisonale Fensterabdichtungen für mobile Klimageräte – für angenehm kühle Räume und eine bessere Energieeffizienz im Sommer."
+  },
 
-{
-icon:"🏡",
-title:"Haushalt & Besorgungen",
-text:"Unterstützung bei Einkäufen, Besorgungen, Wäsche sowie der Organisation alltäglicher Aufgaben – zuverlässig und individuell."
-},
+  {
+    icon: HaushaltIcon,
+    color: "petrol",
+    title: "Haushalt & Besorgungen",
+    text: "Unterstützung bei Einkäufen, Besorgungen, Wäsche sowie der Organisation alltäglicher Aufgaben – zuverlässig und individuell."
+  },
 
-{
-icon:"🤝",
-title:"Gesellschaft & Unterstützung",
-text:"Begleitung & Ansprechpartner: Behörden, Spaziergänge sowie persönliche Unterstützung und Gesellschaft im Alltag."
-},
-
-{
-icon:"❄️",
-title:"Fensterabdichtungen für mobile Klimageräte",
-text:"Saisonale Fensterabdichtungen für mobile Klimageräte – für angenehm kühle Räume und eine bessere Energieeffizienz im Sommer."
-}
-
+  {
+    icon: GesellschaftIcon,
+    color: "orange",
+    title: "Gesellschaft & Unterstützung",
+    text: "Begleitung & Ansprechpartner: Behörden, Spaziergänge sowie persönliche Unterstützung und Gesellschaft im Alltag."
+  }
 ];
-
 ---
 
 <section id="services">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-header">
+    <div class="section-header">
 
-<span class="section-eyebrow">
+      <span class="section-eyebrow">
+        Leistungen
+      </span>
 
-Leistungen
+      <h2 class="section-title">
+        Unterstützung,
+        <br />
+        genau dort,
+        wo Sie sie brauchen.
+      </h2>
 
-</span>
+      <p class="section-subtitle">
+        Ihr persönlicher Alltagsservice für
+        <strong> 1220 Donaustadt </strong>
+        und
+        <strong> 1210 Floridsdorf </strong>.
+        Alle Leistungen können einzeln oder kombiniert,
+        einmalig oder regelmäßig in Anspruch genommen werden.
+        Weitere Wiener Bezirke gerne auf Anfrage.
+      </p>
 
-<h2 class="section-title">
+    </div>
 
-Unterstützung,
-<br>
 
-genau dort,
-wo Sie sie brauchen.
+    <div class="services-grid">
 
-</h2>
+      {
+        services.map((service) => (
 
-<p class="section-subtitle">
+          <article class="service-card">
 
-Ihr persönlicher Alltagsservice für
-<strong> 1220 Donaustadt </strong>
-und
-<strong> 1210 Floridsdorf</strong>.
+            <div class={`service-icon ${service.color}`}>
 
-Alle Leistungen können einzeln oder kombiniert,
-einmalig oder regelmäßig in Anspruch genommen werden.
-Weitere Wiener Bezirke gerne auf Anfrage.
+              <img
+                src={service.icon.src}
+                alt={service.title}
+                loading="lazy"
+              />
 
-</p>
+            </div>
 
-</div>
 
-<div class="services-grid">
+            <h3>
+              {service.title}
+            </h3>
 
-{
 
-services.map((service)=>(
+            <p>
+              {service.text}
+            </p>
 
-<article class="service-card">
 
-<div class="service-icon">
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Unverbindlich anfragen
+              <span aria-hidden="true">→</span>
+            </a>
 
-{service.icon}
+          </article>
 
-</div>
+        ))
+      }
 
-<h3>
+    </div>
 
-{service.title}
-
-</h3>
-
-<p>
-
-{service.text}
-
-</p>
-      <a
-        href="#contact"
-        class="service-link">
-
-        Unverbindlich anfragen →
-
-      </a>
-
-    </article>
-
-))
-
-}
-
-</div>
-
-</div>
+  </div>
 
 </section>
+
+
 <style>
 
-#services{
+#services {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
 
-background:white;
 
-position:relative;
+/* ================================
+   SECTION HEADER
+================================ */
 
-overflow:hidden;
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+
+/* ================================
+   SERVICE GRID
+================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+
+/* ================================
+   SERVICE CARD
+================================ */
+
+.service-card {
+  background: white;
+  border-radius: 28px;
+  padding: 38px;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.06);
+
+  border:
+    1px solid rgba(47, 109, 115, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* obere Hover-Linie */
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--petrol),
+      var(--orange)
+    );
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+/* Card Hover */
+
+.service-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* obere Linie beim Hover */
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* ================================
+   SERVICE ICON
+================================ */
+
+.service-icon {
+  width: 82px;
+  height: 82px;
+
+  border-radius: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 28px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* Icon Farben */
+
+.service-icon.petrol {
+  background: var(--petrol);
+}
+
+.service-icon.orange {
+  background: var(--orange);
+}
+
+
+/* Bild */
+
+.service-icon img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+/* Icon Hover */
+
+.service-card:hover .service-icon {
+  transform: none;
+  box-shadow: none;
+}
+
+.service-card:hover .service-icon img {
+  transform: scale(1.03);
+}
+
+
+/* ================================
+   SERVICE TITLE
+================================ */
+
+.service-card h3 {
+  margin-bottom: 18px;
+
+  font-size: 1.35rem;
+  line-height: 1.4;
+
+  color: var(--petrol);
+
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* ================================
+   SERVICE TEXT
+================================ */
+
+.service-card p {
+  flex: 1;
+
+  margin-bottom: 32px;
+
+  line-height: 1.85;
+}
+
+
+/* ================================
+   SERVICE LINK
+================================ */
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-weight: 700;
+
+  color: var(--petrol);
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+
+  margin-top: auto;
+}
+
+
+.service-link:hover {
+  gap: 14px;
+  color: var(--orange);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 }
 
-.section-header{
 
-text-align:center;
+/* ================================
+   MOBILE
+================================ */
 
-margin-bottom:70px;
+@media (max-width: 768px) {
 
-}
+  #services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
-.services-grid{
 
-display:grid;
+  .section-header {
+    margin-bottom: 50px;
+  }
 
-grid-template-columns:repeat(3,1fr);
 
-gap:32px;
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 
-align-items:stretch;
 
-}
+  .service-card {
+    padding: 30px;
+  }
 
-.service-card{
 
-background:white;
+  .service-icon {
+    width: 70px;
+    height: 70px;
 
-border-radius:28px;
+    border-radius: 21px;
 
-padding:38px;
+    margin-bottom: 22px;
+  }
 
-display:flex;
 
-flex-direction:column;
+  .service-card h3 {
+    font-size: 1.25rem;
+    min-height: auto;
+  }
 
-height:100%;
 
-box-shadow:0 10px 35px rgba(0,0,0,.06);
-
-border:1px solid rgba(47,109,115,.06);
-
-transition:all .35s ease;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.service-card::before{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-top:0;
-
-width:100%;
-
-height:5px;
-
-background:linear-gradient(
-90deg,
-var(--petrol),
-var(--orange)
-);
-
-transform:scaleX(0);
-
-transform-origin:left;
-
-transition:.35s;
-
-}
-
-.service-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 22px 45px rgba(0,0,0,.12);
-
-}
-
-.service-card:hover::before{
-
-transform:scaleX(1);
-
-}
-
-.service-icon{
-
-width:82px;
-
-height:82px;
-
-border-radius:24px;
-
-background:#EAF5F3;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:2.3rem;
-
-margin-bottom:28px;
-
-transition:.35s;
-
-}
-
-.service-card:hover .service-icon{
-
-transform:rotate(6deg) scale(1.08);
-
-background:var(--petrol);
-
-color:white;
-
-}
-
-.service-card h3{
-
-margin-bottom:18px;
-
-font-size:1.35rem;
-
-line-height:1.4;
-
-color:var(--petrol);
-
-min-height:76px;
-
-display:flex;
-
-align-items:center;
-
-}
-
-.service-card p{
-
-flex:1;
-
-margin-bottom:32px;
-
-line-height:1.85;
-
-}
-
-.service-link{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:8px;
-
-font-weight:700;
-
-color:var(--petrol);
-
-transition:.3s;
-
-margin-top:auto;
-
-}
-
-.service-link:hover{
-
-gap:14px;
-
-color:var(--orange);
-
-}
-
-@media(max-width:1024px){
-
-.services-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-@media(max-width:768px){
-
-#services{
-
-padding-top:80px;
-
-padding-bottom:80px;
-
-}
-
-.section-header{
-
-margin-bottom:50px;
-
-}
-
-.services-grid{
-
-grid-template-columns:1fr;
-
-gap:24px;
-
-}
-
-.service-card{
-
-padding:30px;
-
-}
-
-.service-icon{
-
-width:70px;
-
-height:70px;
-
-font-size:2rem;
-
-margin-bottom:22px;
-
-}
-
-.service-card h3{
-
-font-size:1.25rem;
-
-min-height:auto;
-
-}
-
-.service-card p{
-
-margin-bottom:24px;
-
-}
+  .service-card p {
+    margin-bottom: 24px;
+  }
 
 }
 

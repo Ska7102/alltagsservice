@@ -1,691 +1,863 @@
 ---
-import portrait from "../assets/images/portrait.png";
+
+const features = [
+  {
+    icon: "🤝",
+    title: "Handschlag - Qualität",
+    text: "Kein anonymer Dienst – Sie wissen, wer zu Ihnen kommt."
+  },
+  {
+    icon: "🛠️",
+    title: "Anpacken statt lange reden",
+    text: "Mit Plan! Praktische Hilfe, unkompliziert und mit Hausverstand."
+  },
+  {
+    icon: "📍",
+    title: "Aus Ihrer Nachbarschaft",
+    text: "1220 Donaustadt & 1210 Floridsdorf."
+  }
+];
+
+
+const trustFeatures = [
+  {
+    icon: "⏱️",
+    title: "Zuverlässig & pünktlich",
+    text: "Vereinbarte Termine und Absprachen sind für mich selbstverständlich."
+  },
+  {
+    icon: "❤️",
+    title: "Mit Herz dabei",
+    text: "Persönliche Unterstützung, respektvoller Umgang und ein offenes Ohr."
+  },
+  {
+    icon: "🔄",
+    title: "Flexible Unterstützung",
+    text: "Einmalig oder regelmäßig – genau so, wie Sie meine Hilfe brauchen."
+  }
+];
+
 ---
 
-<section id="about">
+<section id="about" class="about-section">
 
-  <div class="container">
+  <div class="container about-container">
 
-    <div class="about-grid">
 
-      <!-- ==========================
-           LINKE SPALTE
-      =========================== -->
+    <!-- ==========================================
+         EINLEITUNG
+    =========================================== -->
 
-      <div class="about-left fade-up">
+    <div class="about-intro">
 
-        <div class="about-image">
+      <span class="section-eyebrow">
+        Persönlich für Sie da
+      </span>
 
-          <div class="portrait-circle"></div>
+      <h2 class="about-title">
+        Ich weiß, dass im Alltag
+        <br />
+        manchmal einfach eine
+        <span> helfende Hand fehlt.</span>
+      </h2>
+
+    </div>
+
+
+    <!-- ==========================================
+         HAUPTBEREICH
+    =========================================== -->
+
+    <div class="about-main">
+
+
+      <!-- ========================================
+           LINKER BEREICH – FOTO
+      ========================================= -->
+
+      <div class="about-person">
+
+        <div class="portrait-card">
 
           <img
-            src={portrait.src}
-            alt="Sascha Kattenberg"
-            class="portrait"
-            width="460"
-            height="560"
-            loading="lazy"
+            src="/images/Foto.png"
+            alt="Sascha Kattenberg – Inhaber von Alltagsservice Wien"
+            class="portrait-image"
           />
 
         </div>
 
-        <blockquote>
 
-          „Ich unterstütze Sie so,
-          wie ich selbst Unterstützung
-          erwarten würde.“
+        <!-- Zitat -->
 
-        </blockquote>
+        <div class="about-quote">
 
-        <div class="signature">
+          <div class="quote-mark">
+            “
+          </div>
 
-          <strong>
+          <p>
+            Ich möchte Ihnen die Unterstützung
+            bieten, die ich mir selbst wünschen
+            würde: zuverlässig, respektvoll und
+            ohne unnötige Umstände.
+          </p>
 
-            Sascha Kattenberg
+        </div>
 
-          </strong>
 
-          <span>
+        <div class="person-name">
+          Sascha Kattenberg
+        </div>
 
-            Inhaber · Alltagsservice Wien
-
-          </span>
-
+        <div class="person-role">
+          Inhaber · Alltagsservice Wien
         </div>
 
       </div>
 
-      <!-- ==========================
-           RECHTE SPALTE
-      =========================== -->
 
-      <div class="about-content fade-up">
+      <!-- ========================================
+           RECHTER BEREICH – TEXT
+      ========================================= -->
 
-        <span class="section-eyebrow">
+      <div class="about-content">
 
-          Persönlich für Sie da
+<p>
+  Mein Name ist <strong>Sascha Kattenberg</strong> und genau die
+  möchte ich Ihnen reichen!
+</p>
 
-        </span>
+<p>
+  Ich habe viele Jahre beruflich Verantwortung übernommen,
+  Menschen begleitet, Teams organisiert und dafür gesorgt,
+  dass auch dann eine gute Lösung gefunden wird, wenn es
+  einmal schnell gehen muss.
+</p>
 
-        <h2>
+<p>
+  Dabei habe ich gelernt:
+  <strong>Zuverlässigkeit, ein respektvoller Umgang und ein offenes Ohr</strong>
+  sind oft genauso wichtig wie die eigentliche Hilfe.
+</p>
 
-          Ihr persönlicher Ansprechpartner
+<p>
+  Heute möchte ich diese Erfahrung auf eine andere Art einsetzen –
+  <strong>persönlich, unkompliziert und direkt vor Ort.</strong>
+</p>
 
-        </h2>
+<p>
+  Ob eine Arbeit im Garten, eine Möbelmontage, ein technisches
+  Problem, eine Besorgung oder einfach jemand, der Sie zu einem
+  Termin begleitet:
+  <strong>Ich möchte Ihnen Dinge abnehmen, die im Alltag gerade
+  schwierig, lästig oder einfach zu viel sind.</strong>
+</p>
 
-        <p class="lead">
-
-          Lernen Sie die Person kennen,
-          die Sie künftig im Alltag
-          unterstützt.
-
-        </p>
-
-        <p>
-
-          Mein Name ist 
-          <strong> Sascha Kattenberg. </strong>
-
-          Ich unterstütze Menschen
-          zuverlässig,
-          freundlich
-          und mit viel Engagement.
-
-          Gute Unterstützung beginnt
-          für mich mit Vertrauen,
-          gegenseitigem Respekt
-          und einem offenen Ohr
-          für Ihre Wünsche.
-
-        </p>
-
-        <div class="about-values">
-
-          <div class="value">
-
-            <div class="value-icon">
-
-              🤝
-
-            </div>
-
-            <div>
-
-              <strong>
-
-                Persönliche Betreuung
-
-              </strong>
-
-              <p>
-
-                Immer derselbe Ansprechpartner.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="value">
-
-            <div class="value-icon">
-
-              ❤️
-
-            </div>
-
-            <div>
-
-              <strong>
-
-                Mit Herz dabei
-
-              </strong>
-
-              <p>
-
-                Freundlich,
-                respektvoll
-                und zuverlässig.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="value">
-
-            <div class="value-icon">
-
-              📍
-
-            </div>
-
-            <div>
-
-              <strong>
-
-                Regional für Sie da
-
-              </strong>
-
-              <p>
-
-                Im Osten Wiens
-                und Umgebung.
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
+<p>
+  Dabei geht es mir nicht darum, möglichst viele Aufgaben
+  abzuarbeiten.
+  <strong>Es geht darum, Ihnen wirklich eine Hilfe zu sein.</strong>
+</p>
 
       </div>
 
     </div>
 
+
+    <!-- ==========================================
+         ERSTE KACHELREIHE
+         Die bisherigen drei Kacheln
+    =========================================== -->
+
+    <div class="about-features">
+
+      {
+        features.map((feature) => (
+
+          <article class="about-feature">
+
+            <div class="feature-icon">
+              {feature.icon}
+            </div>
+
+            <div class="feature-content">
+
+              <h3>
+                {feature.title}
+              </h3>
+
+              <p>
+                {feature.text}
+              </p>
+
+            </div>
+
+          </article>
+
+        ))
+      }
+
+    </div>
+
+
+    <!-- ==========================================
+         ZWEITE KACHELREIHE
+         Neue Vertrauensargumente
+    =========================================== -->
+
+    <div class="about-features about-features-trust">
+
+      {
+        trustFeatures.map((feature) => (
+
+          <article class="about-feature">
+
+            <div class="feature-icon">
+              {feature.icon}
+            </div>
+
+            <div class="feature-content">
+
+              <h3>
+                {feature.title}
+              </h3>
+
+              <p>
+                {feature.text}
+              </p>
+
+            </div>
+
+          </article>
+
+        ))
+      }
+
+    </div>
+
+
   </div>
 
 </section>
+
+
 <style>
 
-#about{
-
-background:linear-gradient(
-180deg,
-#ffffff 0%,
-#F8FAF9 100%
-);
-
-overflow:hidden;
-
-}
-
 /* ==========================================
-   GRID
+   ABOUT – GRUNDLAYOUT
 ========================================== */
 
-.about-grid{
+.about-section {
 
-display:grid;
+  background: #F5F7F6;
 
-grid-template-columns:420px 1fr;
+  position: relative;
 
-gap:90px;
-
-align-items:start;
+  overflow: hidden;
 
 }
+
+
+.about-container {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+}
+
 
 /* ==========================================
-   LINKE SPALTE
+   EINLEITUNG
 ========================================== */
 
-.about-left{
+.about-intro {
 
-display:flex;
+  max-width: 900px;
 
-flex-direction:column;
+  margin: 0 auto 55px;
 
-align-items:center;
-
-}
-
-.about-image{
-
-position:relative;
-
-display:flex;
-
-justify-content:center;
-
-align-items:flex-start;
-
-margin-bottom:35px;
+  text-align: center;
 
 }
 
-.portrait-circle{
 
-position:absolute;
+.about-intro .section-eyebrow {
 
-width:420px;
+  display: inline-block;
 
-height:420px;
-
-border-radius:50%;
-
-background:radial-gradient(
-
-circle,
-
-rgba(47,109,115,.10) 0%,
-
-rgba(232,154,61,.12) 60%,
-
-transparent 100%
-
-);
-
-z-index:1;
-
-animation:pulseCircle 10s ease-in-out infinite;
+  margin-bottom: 22px;
 
 }
 
-.portrait{
 
-position:relative;
+.about-title {
 
-width:420px;
+  margin: 0;
 
-height:auto;
+  font-size: clamp(2rem, 4vw, 3.2rem);
 
-z-index:2;
+  line-height: 1.18;
 
-filter:drop-shadow(0 24px 45px rgba(0,0,0,.16));
+  color: var(--petrol);
 
-transition:.35s;
-
-animation:floatPortrait 8s ease-in-out infinite;
+  letter-spacing: -.5px;
 
 }
 
-.portrait:hover{
 
-transform:translateY(-8px) scale(1.02);
+.about-title span {
+
+  color: var(--orange);
 
 }
+
+
+/* ==========================================
+   HAUPTBEREICH
+========================================== */
+
+.about-main {
+
+  display: grid;
+
+  grid-template-columns: 320px minmax(0, 1fr);
+
+  gap: 65px;
+
+  align-items: start;
+
+}
+
+
+/* ==========================================
+   PERSON / PORTRAIT
+========================================== */
+
+.about-person {
+
+  width: 100%;
+
+}
+
+
+.portrait-card {
+
+  width: 100%;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background: white;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+.portrait-image {
+
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+}
+
 
 /* ==========================================
    ZITAT
 ========================================== */
 
-blockquote{
+.about-quote {
 
-width:100%;
+  position: relative;
 
-padding:24px 28px;
+  margin-top: 18px;
 
-background:#F5F7F6;
+  padding: 20px 20px 20px 24px;
 
-border-left:6px solid var(--orange);
+  background: white;
 
-border-radius:0 18px 18px 0;
+  border-left: 4px solid var(--orange);
 
-font-size:1.1rem;
+  border-radius: 0 14px 14px 0;
 
-font-style:italic;
-
-color:var(--petrol);
-
-line-height:1.8;
-
-margin-bottom:26px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
 
 }
 
-.signature{
 
-width:100%;
+.quote-mark {
 
-padding-top:20px;
+  position: absolute;
 
-border-top:2px solid rgba(47,109,115,.08);
+  left: 12px;
 
-display:flex;
+  top: 4px;
 
-flex-direction:column;
+  font-size: 2.4rem;
 
-gap:6px;
+  line-height: 1;
 
-}
+  color: var(--orange);
 
-.signature strong{
-
-font-size:1.3rem;
-
-color:var(--petrol);
+  opacity: .35;
 
 }
 
-.signature span{
 
-color:var(--text-light);
+.about-quote p {
+
+  margin: 0;
+
+  font-size: .9rem;
+
+  line-height: 1.65;
+
+  font-style: italic;
+
+  color: #5F6869;
 
 }
+
 
 /* ==========================================
-   RECHTE SPALTE
+   NAME
 ========================================== */
 
-.about-content{
+.person-name {
 
-max-width:650px;
+  margin-top: 18px;
 
-}
+  font-weight: 800;
 
-.about-content h2{
+  color: var(--petrol);
 
-margin:16px 0 20px;
-
-}
-
-.lead{
-
-font-size:1.18rem;
-
-font-weight:500;
-
-color:var(--petrol);
-
-margin-bottom:30px;
+  font-size: 1rem;
 
 }
 
-.about-content p{
 
-line-height:1.9;
+.person-role {
 
-margin-bottom:24px;
+  margin-top: 4px;
+
+  color: #7A8282;
+
+  font-size: .82rem;
 
 }
+
 
 /* ==========================================
-   KARTEN
+   TEXTBEREICH
 ========================================== */
 
-.about-values{
+.about-content {
 
-display:grid;
-
-gap:18px;
-
-margin-top:40px;
+  max-width: 720px;
 
 }
 
-.value{
 
-display:flex;
+.about-content p {
 
-align-items:flex-start;
+  margin: 0 0 20px;
 
-gap:18px;
+  color: #5F6869;
 
-padding:18px 22px;
+  font-size: 1rem;
 
-background:white;
-
-border-radius:22px;
-
-box-shadow:0 8px 24px rgba(0,0,0,.06);
-
-transition:.3s;
+  line-height: 1.85;
 
 }
 
-.value:hover{
 
-transform:translateY(-4px);
+.about-content p:last-child {
 
-box-shadow:0 18px 35px rgba(0,0,0,.10);
-
-}
-
-.value-icon{
-
-width:56px;
-
-height:56px;
-
-border-radius:18px;
-
-background:#EAF5F3;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:1.5rem;
-
-flex-shrink:0;
-
-transition:.3s;
+  margin-bottom: 0;
 
 }
 
-.value:hover .value-icon{
 
-background:var(--petrol);
+.about-content strong {
 
-color:white;
+  color: var(--petrol);
 
-}
-
-.value strong{
-
-display:block;
-
-margin-bottom:6px;
-
-color:var(--petrol);
-
-font-size:1.05rem;
+  font-weight: 800;
 
 }
 
-.value p{
-
-margin:0;
-
-font-size:.97rem;
-
-line-height:1.6;
-
-}
 
 /* ==========================================
-   ANIMATIONEN
+   FEATURE-KACHELN
 ========================================== */
 
-.fade-up{
+.about-features {
 
-opacity:0;
+  display: grid;
 
-transform:translateY(35px);
+  grid-template-columns: repeat(3, 1fr);
 
-animation:fadeUp .8s ease forwards;
+  gap: 20px;
 
-}
-
-.fade-up:nth-child(2){
-
-animation-delay:.15s;
+  margin-top: 55px;
 
 }
 
-@keyframes fadeUp{
 
-from{
+/* Zweite Reihe */
 
-opacity:0;
+.about-features-trust {
 
-transform:translateY(35px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
+  margin-top: 20px;
 
 }
 
+
+.about-feature {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 105px;
+
+  padding: 20px 24px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+
+  border: 1px solid rgba(47, 109, 115, .06);
+
+  overflow: hidden;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
 }
 
-@keyframes floatPortrait{
 
-0%{transform:translateY(0);}
+/* ==========================================
+   LAUFENDER STREIFEN
+========================================== */
 
-50%{transform:translateY(-10px);}
+.about-feature::before {
 
-100%{transform:translateY(0);}
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    var(--petrol),
+    var(--orange)
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform .4s ease;
 
 }
 
-@keyframes pulseCircle{
 
-0%{transform:scale(1);}
+.about-feature:hover {
 
-50%{transform:scale(1.04);}
+  transform: translateY(-7px);
 
-100%{transform:scale(1);}
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .11);
 
 }
+
+
+.about-feature:hover::before {
+
+  transform: scaleX(1);
+
+}
+
+
+/* ==========================================
+   FEATURE ICON
+========================================== */
+
+.feature-icon {
+
+  width: 52px;
+
+  height: 52px;
+
+  flex: 0 0 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #EAF5F3;
+
+  font-size: 1.35rem;
+
+  transition:
+    transform .35s ease,
+    background .35s ease;
+
+}
+
+
+.about-feature:hover .feature-icon {
+
+  transform: scale(1.08) rotate(4deg);
+
+  background: #E1F0EE;
+
+}
+
+
+/* ==========================================
+   FEATURE TEXT
+========================================== */
+
+.feature-content {
+
+  min-width: 0;
+
+}
+
+
+.feature-content h3 {
+
+  margin: 0 0 5px;
+
+  font-size: 1rem;
+
+  color: var(--petrol);
+
+}
+
+
+.feature-content p {
+
+  margin: 0;
+
+  font-size: .82rem;
+
+  line-height: 1.5;
+
+  color: #737C7D;
+
+}
+
 
 /* ==========================================
    TABLET
 ========================================== */
 
-@media(max-width:1100px){
+@media (max-width: 1024px) {
 
-.about-grid{
+  .about-main {
 
-grid-template-columns:1fr;
+    grid-template-columns: 270px minmax(0, 1fr);
 
-gap:60px;
+    gap: 45px;
 
-}
+  }
 
-.about-left{
 
-order:1;
+  .about-features {
 
-}
+    gap: 16px;
 
-.about-content{
+  }
 
-order:2;
 
-max-width:100%;
+  .about-feature {
 
-text-align:center;
+    padding: 18px;
 
-}
+    gap: 14px;
 
-blockquote{
+  }
 
-text-align:left;
 
-}
+  .feature-icon {
 
-.signature{
+    width: 46px;
 
-align-items:center;
+    height: 46px;
 
-}
+    flex-basis: 46px;
 
-.about-values{
+    font-size: 1.2rem;
 
-max-width:620px;
-
-margin:40px auto 0;
+  }
 
 }
 
-}
 
 /* ==========================================
    SMARTPHONE
 ========================================== */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-#about{
+  .about-intro {
 
-padding:80px 0;
+    margin-bottom: 40px;
+
+  }
+
+
+  .about-title {
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+  }
+
+
+  .about-main {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+  }
+
+
+  .about-person {
+
+    max-width: 340px;
+
+    margin: 0 auto;
+
+  }
+
+
+  .about-content {
+
+    max-width: none;
+
+  }
+
+
+  .about-content p {
+
+    font-size: .95rem;
+
+    line-height: 1.75;
+
+  }
+
+
+  .about-features {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-top: 40px;
+
+  }
+
+
+  .about-features-trust {
+
+    margin-top: 14px;
+
+  }
+
+
+  .about-feature {
+
+    min-height: 0;
+
+    padding: 18px 20px;
+
+  }
 
 }
 
-.portrait{
 
-width:260px;
+/* ==========================================
+   KLEINE SMARTPHONES
+========================================== */
 
-}
+@media (max-width: 420px) {
 
-.portrait-circle{
+  .about-title {
 
-width:300px;
+    font-size: 1.75rem;
 
-height:300px;
+  }
 
-}
 
-.about-content h2{
+  .about-person {
 
-font-size:2rem;
+    max-width: 300px;
 
-}
+  }
 
-.lead{
 
-font-size:1.05rem;
+  .about-feature {
 
-}
+    padding: 17px;
 
-.value{
-
-padding:16px 18px;
+  }
 
 }
 
-.value-icon{
 
-width:48px;
+/* ==========================================
+   REDUZIERTE BEWEGUNG
+========================================== */
 
-height:48px;
+@media (prefers-reduced-motion: reduce) {
 
-font-size:1.25rem;
+  .about-feature,
+  .about-feature::before,
+  .feature-icon {
 
-}
+    transition: none;
 
-blockquote{
-
-padding:20px;
-
-font-size:1rem;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.portrait{
-
-width:220px;
-
-}
-
-.about-content h2{
-
-font-size:1.8rem;
-
-}
-
-.signature strong{
-
-font-size:1.15rem;
-
-}
+  }
 
 }
 

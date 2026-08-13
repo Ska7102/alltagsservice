@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {
-  title = "Alltagsservice Wien 1210, 1220 & 1020 | Persönliche Unterstützung im Alltag"
+  title = "Alltagsservice Wien | Alltagshilfe & persönliche Unterstützung"
 } = Astro.props;
 ---
 
@@ -31,11 +31,13 @@ const {
 
 <meta
   name="description"
-  content="Persönliche Unterstützung im Alltag in Wien. Besonders in 1210 Floridsdorf, 1220 Donaustadt und 1020 Leopoldstadt. Hilfe bei Einkäufen, Begleitungen, Gartenarbeiten, Organisation im Haushalt und vielen weiteren alltäglichen Aufgaben." />
+  content="Alltagsservice Wien: persönliche und zuverlässige Alltagshilfe in 1220 Donaustadt und 1210 Floridsdorf. Hilfe bei Gartenarbeit, Haushalt, Besorgungen, Kleinreparaturen, Technik und Begleitungen."
+/>
 
 <meta
   name="keywords"
-  content="Alltagsservice Wien, Alltagsservice 1210, Alltagsservice 1220, Alltagsservice 1020, Alltagshilfe Wien, Alltagshilfe Floridsdorf, Alltagshilfe Donaustadt, Alltagshilfe Leopoldstadt, Unterstützung im Alltag Wien, Einkaufsservice Wien, Begleitservice Wien, Gartenhilfe Wien, Seniorenhilfe Wien" />
+  content="Alltagsservice Wien, Alltagshilfe Wien, Unterstützung im Alltag Wien, Alltagsservice 1220, Alltagshilfe Donaustadt, Alltagsservice 1210, Alltagshilfe Floridsdorf, Gartenhilfe Wien, Gartenarbeit Wien, Haushaltshilfe Wien, Besorgungen Wien, Einkaufsservice Wien, Möbelmontage Wien, Kleinreparaturen Wien, Technikhilfe Wien, Computerhilfe Wien, Begleitung Wien, Gesellschaft und Unterstützung"
+/>
 
 <meta
   name="author"
@@ -75,12 +77,11 @@ const {
 
 <meta
   property="og:title"
-  content="Alltagsservice Wien 1210, 1220 & 1020 | Persönliche Unterstützung im Alltag" />
+  content="Alltagsservice Wien | Alltagshilfe & persönliche Unterstützung" />
 
 <meta
   property="og:description"
-  content="Persönliche Unterstützung im Alltag in Floridsdorf, Donaustadt und Leopoldstadt. Zuverlässig, freundlich und flexibel." />
-
+  content="Alltagsservice Wien: persönliche und zuverlässige Alltagshilfe in 1220 Donaustadt und 1210 Floridsdorf. Hilfe bei Gartenarbeit, Haushalt, Besorgungen, Kleinreparaturen, Technik und Begleitungen." />
 <meta
   property="og:url"
   content="https://alltagsservices.netlify.app/" />
@@ -101,13 +102,13 @@ const {
   name="twitter:card"
   content="summary_large_image" />
 
-<meta
+<<meta
   name="twitter:title"
-  content="Alltagsservice Wien 1210, 1220 & 1020" />
+  content="Alltagsservice Wien | Alltagshilfe & persönliche Unterstützung" />
 
 <meta
   name="twitter:description"
-  content="Persönliche Unterstützung im Alltag in Wien. Zuverlässig, freundlich und flexibel." />
+  content="Persönliche und zuverlässige Alltagshilfe in 1220 Donaustadt und 1210 Floridsdorf – bei Gartenarbeit, Haushalt, Besorgungen, Kleinreparaturen, Technik und Begleitungen." />
 
 <meta
   name="twitter:image"
@@ -121,91 +122,115 @@ const {
   is:inline>
 
 {
-  "@context":"https://schema.org",
+  "@context": "https://schema.org",
 
-  "@type":"LocalBusiness",
+  "@type": "LocalBusiness",
 
-  "name":"Alltagsservice Wien",
+  "name": "Alltagsservice Wien",
 
-  "url":"https://alltagsservices.netlify.app",
+  "url": "https://alltagsservices.netlify.app",
 
-  "logo":"https://alltagsservices.netlify.app/images/logo.png",
+  "logo": "https://alltagsservices.netlify.app/images/logo.png",
 
-  "image":"https://alltagsservices.netlify.app/images/logo.png",
+  "image": "https://alltagsservices.netlify.app/images/logo.png",
 
-  "telephone":"+436604623979",
+  "telephone": "+436604623979",
 
-  "email":"alltagsservice@chello.at",
+  "email": "alltagsservice@chello.at",
 
-  "priceRange":"€",
+  "priceRange": "€",
 
-  "description":"Persönliche Unterstützung im Alltag in Wien. Zuverlässige Hilfe bei Einkäufen, Begleitungen, Organisation im Haushalt, Gartenarbeiten und vielen weiteren alltäglichen Aufgaben.",
+  "description": "Persönliche und zuverlässige Alltagshilfe in Wien. Unterstützung bei Gartenarbeit, Haushalt, Besorgungen, Möbelmontage, Kleinreparaturen, Technik sowie Begleitung und Gesellschaft.",
 
-  "address":{
+  "address": {
 
-    "@type":"PostalAddress",
+    "@type": "PostalAddress",
 
-    "streetAddress":"Rugierstraße 28/4/4",
+    "streetAddress": "Rugierstraße 28/4/4",
 
-    "postalCode":"1220",
+    "postalCode": "1220",
 
-    "addressLocality":"Wien",
+    "addressLocality": "Wien",
 
-    "addressRegion":"Wien",
+    "addressRegion": "Wien",
 
-    "addressCountry":"AT"
+    "addressCountry": "AT"
 
   },
 
-  "areaServed":[
+  "areaServed": [
 
     {
 
-      "@type":"City",
+      "@type": "Place",
 
-      "name":"1210 Wien"
+      "name": "1220 Wien – Donaustadt"
 
     },
 
     {
 
-      "@type":"City",
+      "@type": "Place",
 
-      "name":"1220 Wien"
+      "name": "1210 Wien – Floridsdorf"
 
     },
 
     {
 
-      "@type":"City",
+      "@type": "City",
 
-      "name":"1020 Wien"
+      "name": "Wien"
 
     }
 
   ],
 
-  "openingHoursSpecification":[
+  "serviceType": [
+
+    "Alltagshilfe",
+
+    "Gartenarbeit",
+
+    "Haushalt und Besorgungen",
+
+    "Möbelmontage",
+
+    "Kleinreparaturen",
+
+    "Handy-, Computer- und Technikhilfe",
+
+    "Begleitung und Gesellschaft"
+
+  ],
+
+  "openingHoursSpecification": [
 
     {
 
-      "@type":"OpeningHoursSpecification",
+      "@type": "OpeningHoursSpecification",
 
-      "dayOfWeek":[
+      "dayOfWeek": [
 
         "Monday",
+
         "Tuesday",
+
         "Wednesday",
+
         "Thursday",
+
         "Friday",
+
         "Saturday",
+
         "Sunday"
 
       ],
 
-      "opens":"08:00",
+      "opens": "08:00",
 
-      "closes":"18:00"
+      "closes": "18:00"
 
     }
 
