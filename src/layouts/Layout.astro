@@ -31,12 +31,12 @@ const {
 
 <meta
   name="description"
-  content="Alltagsservice Wien: persönliche und zuverlässige Alltagshilfe in 1220 Donaustadt und 1210 Floridsdorf. Hilfe bei Gartenarbeit, Haushalt, Besorgungen, Kleinreparaturen, Technik und Begleitungen."
+  content="Alltagsservice Wien: persönliche und zuverlässige Alltagshilfe in 1220 Donaustadt und 1210 Floridsdorf. Gartenarbeit, Möbelmontage, Renovierungen, Haushalt und Technik – persönlich und direkt vor Ort."
 />
 
 <meta
   name="keywords"
-  content="Alltagsservice Wien, Alltagshilfe Wien, Unterstützung im Alltag Wien, Alltagsservice 1220, Alltagshilfe Donaustadt, Alltagsservice 1210, Alltagshilfe Floridsdorf, Gartenhilfe Wien, Gartenarbeit Wien, Haushaltshilfe Wien, Besorgungen Wien, Einkaufsservice Wien, Möbelmontage Wien, Kleinreparaturen Wien, Technikhilfe Wien, Computerhilfe Wien, Begleitung Wien, Gesellschaft und Unterstützung"
+  content="Alltagsservice Wien, Alltagshilfe Wien, Unterstützung im Alltag Wien, Alltagsservice 1220, Alltagshilfe Donaustadt, Alltagsservice 1210, Alltagshilfe Floridsdorf, Gartenhilfe Wien, Gartenarbeit Wien, Haushaltshilfe Wien, Besorgungen Wien, Möbelmontage Wien, Kleinreparaturen Wien, Renovierungen Wien, Renovierungsarbeiten Wien, Renovierungen 1220, Renovierungen 1210, Technikhilfe Wien, Computerhilfe Wien, Smart Home Einrichtung Wien, Smart Home Konfiguration Wien, Smart TV Einrichtung Wien, Kontowiederherstellung Wien, Hilfe bei Kontowiederherstellung, Urlaubsvertretung Pflanzen Wien, Pflanzen gießen Urlaub Wien, Tierbetreuung Urlaub Wien"
 />
 
 <meta
@@ -82,6 +82,7 @@ const {
 <meta
   property="og:description"
   content="Alltagsservice Wien: persönliche und zuverlässige Alltagshilfe in 1220 Donaustadt und 1210 Floridsdorf. Hilfe bei Gartenarbeit, Haushalt, Besorgungen, Kleinreparaturen, Technik und Begleitungen." />
+
 <meta
   property="og:url"
   content="https://alltagsservices.netlify.app/" />
@@ -102,7 +103,7 @@ const {
   name="twitter:card"
   content="summary_large_image" />
 
-<<meta
+<meta
   name="twitter:title"
   content="Alltagsservice Wien | Alltagshilfe & persönliche Unterstützung" />
 
@@ -113,6 +114,7 @@ const {
 <meta
   name="twitter:image"
   content="https://alltagsservices.netlify.app/images/logo.png" />
+
 <!-- ==========================================
      Strukturierte Unternehmensdaten
 ========================================== -->
@@ -140,13 +142,13 @@ const {
 
   "priceRange": "€",
 
-  "description": "Persönliche und zuverlässige Alltagshilfe in Wien. Unterstützung bei Gartenarbeit, Haushalt, Besorgungen, Möbelmontage, Kleinreparaturen, Technik sowie Begleitung und Gesellschaft.",
+  "description": "Persönliche und zuverlässige Alltagshilfe in Wien. Unterstützung bei Gartenarbeit, Haushalt, Besorgungen, Möbelmontage, Kleinreparaturen, Renovierungsarbeiten, Technik sowie Begleitung und Gesellschaft.",
 
   "address": {
 
     "@type": "PostalAddress",
 
-    "streetAddress": "Rugierstraße 28/4/4",
+    "streetAddress": "Rugierstraße 28",
 
     "postalCode": "1220",
 
@@ -187,22 +189,19 @@ const {
   ],
 
   "serviceType": [
-
-    "Alltagshilfe",
-
-    "Gartenarbeit",
-
-    "Haushalt und Besorgungen",
-
-    "Möbelmontage",
-
-    "Kleinreparaturen",
-
-    "Handy-, Computer- und Technikhilfe",
-
-    "Begleitung und Gesellschaft"
-
-  ],
+  "Alltagshilfe",
+  "Gartenarbeit",
+  "Haushalt und Besorgungen",
+  "Möbelmontage",
+  "Kleinreparaturen",
+  'Renovierungsarbeiten',
+  "Handy-, Computer- und Technikhilfe",
+  "Smart Home Konfiguration und Einrichtung",
+  "Smart TV Einrichtung",
+  "Kontowiederherstellung und Hilfe bei Zugangsproblemen",
+  "Urlaubsvertretung für Pflanzen und Tiere",
+  "Begleitung und Gesellschaft"
+],
 
   "openingHoursSpecification": [
 
@@ -263,12 +262,43 @@ const {
 
 <link
   rel="icon"
+  type="image/x-icon"
+  href="/favicon.ico" />
+
+<link
+  rel="icon"
   type="image/png"
-  href="/images/logo.png" />
+  sizes="16x16"
+  href="/favicon-16.png" />
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/favicon-32.png" />
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="48x48"
+  href="/favicon-48.png" />
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="/favicon-192.png" />
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="512x512"
+  href="/favicon-512.png" />
 
 <link
   rel="apple-touch-icon"
-  href="/images/logo.png" />
+  sizes="192x192"
+  href="/favicon-192.png" />
 
 <!-- ==========================================
      Globales Stylesheet
@@ -809,7 +839,7 @@ padding:65px 0;
 
 <main>
 
-  <slot />
+<slot />
 
 </main>
 

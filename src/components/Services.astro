@@ -10,22 +10,22 @@ const services = [
   {
     icon: GartenarbeitIcon,
     color: "petrol",
-    title: "Hilfe bei Gartenarbeit",
-    text: "Unterstützung bei der Gartenpflege wie Rasen mähen, Heckenschnitt, Unkraut entfernen, Laubarbeiten sowie vielen weiteren saisonalen Gartenarbeiten."
+    title: "Gartenarbeit & Gestaltung",
+    text: "Ich erledige Gartenpflege wie Rasen mähen, Heckenschnitt, Unkraut entfernen, Laubarbeiten sowie viele weitere saisonale Gartenarbeiten, nach Ihrem Geschmack."
   },
 
   {
     icon: MoebelmontageIcon,
     color: "orange",
     title: "Möbelmontage & Kleinreparaturen",
-    text: "Unterstützung bei Möbelmontagen, Lampenwechsel, Bilder aufhängen sowie kleineren Reparaturen und handwerklichen Arbeiten im Haushalt."
+    text: "Ich biete Unterstützung bei Möbelmontagen, Demontage- und Befestigungsarbeiten sowie kleineren Reparaturen, Renovierungen und handwerklichen Arbeiten im Haushalt an."
   },
 
   {
     icon: TechnikIcon,
     color: "petrol",
-    title: "Handy-, Computer- und Technikprobleme",
-    text: "Hilfe bei der Einrichtung neuer Geräte, Internet, Smartphone, Computer sowie allgemeinen Technikproblemen – verständlich und persönlich erklärt."
+    title: "Handy-, Computer- & Technikprobleme",
+    text: "Hilfe bei der Einrichtung neuer Geräte, Internet, Smartphone, Computer, Smart Home Konfiguration & Einrichtung sowie allgemeinen Technikproblemen – verständlich und persönlich erklärt."
   },
 
   {
@@ -39,14 +39,15 @@ const services = [
     icon: HaushaltIcon,
     color: "petrol",
     title: "Haushalt & Besorgungen",
-    text: "Unterstützung bei Einkäufen, Besorgungen, Wäsche sowie der Organisation alltäglicher Aufgaben – zuverlässig und individuell."
+    text: "Ich unterstütze Sie gerne bei Einkäufen & Besorgungen. Auch Ihre Urlaubsvertretung für Planzen und Tiere ;-) sowie die Organisation alltäglicher Aufgaben übernehme ich gerne – zuverlässig und individuell."
   },
 
   {
     icon: GesellschaftIcon,
     color: "orange",
     title: "Gesellschaft & Unterstützung",
-    text: "Begleitung & Ansprechpartner: Behörden, Spaziergänge sowie persönliche Unterstützung und Gesellschaft im Alltag."
+    highlight: "Die digitale Welt kann vieles – aber nicht alles!",
+    text: "Wenn es um das echte Leben geht, unterstütze ich Sie persönlich: bei Terminen, Behördenwegen, Spaziergängen und im Alltag."
   }
 ];
 ---
@@ -105,6 +106,8 @@ const services = [
 
 
             <p>
+              {service.highlight && <strong>{service.highlight}</strong>}
+              {service.highlight && " "}
               {service.text}
             </p>
 
