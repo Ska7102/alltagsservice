@@ -2,7 +2,8 @@
 import GartenarbeitIcon from "../assets/images/services/gartenarbeit.png";
 import MoebelmontageIcon from "../assets/images/services/moebelmontage.png";
 import TechnikIcon from "../assets/images/services/technik.png";
-import FensterIcon from "../assets/images/services/fensterabdichtungen.png";
+import HerbstSpecialIcon from "../assets/images/services/herbst-special.png";
+import HerbstSpecialBadge from "../assets/images/services/herbst-spezial-badge.png";
 import HaushaltIcon from "../assets/images/services/haushalt-besorgungen.png";
 import GesellschaftIcon from "../assets/images/services/gesellschaft-unterstuetzung.png";
 
@@ -25,14 +26,15 @@ const services = [
     icon: TechnikIcon,
     color: "petrol",
     title: "Handy-, Computer- & Technikprobleme",
-    text: "Hilfe bei der Einrichtung neuer Geräte, Internet, Smartphone, Computer, Smart Home Konfiguration & Einrichtung sowie allgemeinen Technikproblemen – verständlich und persönlich erklärt."
+    text: "Hilfe bei der Einrichtung neuer Geräte wie Fernseher, Smartphones, Tablets, Computer, Drucker & Co. Auch bei Internet, Smart-Home-Konfigurations und -Einrichtung sowie bei allgemeinen Technikproblemen – verständlich und persönlich erklärt."
   },
 
   {
-    icon: FensterIcon,
+    icon: HerbstSpecialIcon,
     color: "orange",
-    title: "Fensterabdichtungen für mobile Klimageräte",
-    text: "Saisonale Fensterabdichtungen für mobile Klimageräte – für angenehm kühle Räume und eine bessere Energieeffizienz im Sommer."
+    title: "Garten & Außenbereich winterfit machen",
+    text: "Der Herbst ist da – Zeit, draußen Ordnung zu schaffen. Laub entfernen, Garten, Terrasse und Balkon winterfit machen. Gartenmöbel verstauen oder Pflanzen auf die kalte Jahreszeit vorbereiten und einlagern – Ich bringe Ihren Außenbereich in Winterform.",
+    seasonal: true
   },
 
   {
@@ -87,9 +89,9 @@ const services = [
       {
         services.map((service) => (
 
-          <article class="service-card">
+          <article class={`service-card ${service.seasonal ? "seasonal-card" : ""}`}>
 
-            <div class={`service-icon ${service.color}`}>
+            <div class={`service-icon ${service.color} ${service.seasonal ? "seasonal-icon" : ""}`}>
 
               <img
                 src={service.icon.src}
@@ -98,6 +100,19 @@ const services = [
               />
 
             </div>
+
+            {
+              service.seasonal && (
+                <div class="seasonal-badge" aria-label="Herbst-Spezial">
+                  <img
+                    src={HerbstSpecialBadge.src}
+                    alt=""
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </div>
+              )
+            }
 
 
             <h3>
@@ -272,6 +287,16 @@ const services = [
 }
 
 
+/* Das Herbst-Icon selbst ist rund.
+   Die orange Kachel-Hintergrundfarbe wird dafür entfernt,
+   damit kein abgerundetes Quadrat sichtbar bleibt. */
+
+.service-icon.seasonal-icon {
+  background: transparent;
+  border-radius: 50%;
+}
+
+
 /* Bild */
 
 .service-icon img {
@@ -296,6 +321,46 @@ const services = [
 
 .service-card:hover .service-icon img {
   transform: scale(1.03);
+}
+
+
+/* ================================
+   HERBST-SPECIAL BADGE
+================================ */
+
+.seasonal-badge {
+  position: absolute;
+
+  top: 10px;
+  right: 8px;
+
+  width: 127px;
+  height: 133px;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.seasonal-badge img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* Badge Hover */
+
+.seasonal-card:hover .seasonal-badge {
+  transform: scale(1.10);
+  filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.16));
 }
 
 
@@ -418,6 +483,15 @@ const services = [
 
   .service-card p {
     margin-bottom: 24px;
+  }
+
+
+  .seasonal-badge {
+    top: 8px;
+    right: 6px;
+
+    width: 114px;
+    height: 120px;
   }
 
 }
