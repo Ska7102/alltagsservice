@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://alltagsservices.netlify.app/sitemap.xml
+Sitemap: https://alltagsservices.netlify.app/sitemap-index.xml
